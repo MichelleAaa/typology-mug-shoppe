@@ -26,17 +26,14 @@ const Header = () => {
                         <h1 className="jumbotron-header">Typology</h1>
                         <h2 className="jumbotron-subheader">Mug Shoppe</h2>
                         <h3 className="px-lg-3 mb-3">The best way to share your personality type without saying a word.</h3>
-                        <p className="mx-lg-5 mt-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam voluptates deleniti cum rem a? Sit beatae labore id. Minima cumque vel eum harum enim tempore explicabo doloremque laudantium magni molestias.</p>
-                        <p className="mx-lg-5 mt-2 d-none d-xl-block">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam voluptates deleniti cum rem a?</p>
+                        <p className="mx-lg-5 mt-2 ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam voluptates deleniti cum rem a?</p>
+                        <p className="mx-lg-5 mt-2 d-block d-md-none d-xl-block jumbotron-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam voluptates deleniti cum rem a? Sit beatae labore id. Minima cumque vel eum harum enim tempore explicabo doloremque laudantium magni molestias.</p>
                         <Button/>
                         </div>
                 </div>
                 
             </div>
         </Jumbotron>
-        <div className='diamond-clip-wrapper'> 
-            <div className="diamond-clip-right"></div>
-        </div>
         </>
     );
 }

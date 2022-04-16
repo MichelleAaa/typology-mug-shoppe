@@ -6,7 +6,7 @@ import React, { Component }  from 'react';
 const Button = () => {
     return (
         <>
-        <button class="btn">Buy Now</button>
+        <button className="btn btn-main">Buy Now</button>
         </>
     );
 }
