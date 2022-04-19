@@ -11,16 +11,18 @@ body {
 }
 
 h1 {
-  font-family: 'Expletus Sans', cursive;
-  /* font-family: 'Montserrat', sans-serif; */
-  text-shadow: 1px 1px 1px #5f596a;
+  /* font-family: 'Expletus Sans', cursive; */
+  font-family: 'Montserrat', sans-serif;
+  /* text-shadow: 1px 1px 1px #5f596a; */
   color: #e1dad1;
   font-size: 8rem;
 }
 
 h2, h3, h4, h5 {
   font-family: 'Nunito', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #5f596a;
+  /* color: black; */
 }
 
 code {
@@ -146,8 +148,8 @@ code {
 
 .jumbotron-subheader {
   font-size: 3rem;
-  font-family: 'Expletus Sans',
-  cursive;
+  font-family: 'Expletus Sans', cursive;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .btn-main {
@@ -207,6 +209,7 @@ code {
   color: #5f596a;
   color: #504e52;
   text-shadow: 1px 1px 1px #e9e5df;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media only screen and (min-width: 320px) {
@@ -278,7 +281,7 @@ code {
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   .img-grid-1 {
     width: 20vw;
   }
@@ -288,3 +291,61 @@ code {
     width: 20vw;
   }
 }
+
+.beige-background {
+  background-color: #e1dad1;
+  color: black;
+  border-radius: 5px;
+}
+
+.beige-section-title {
+  color: black;
+}
+
+.beige-section-text {
+  font-style: italic;
+}
+
+.card-img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  display: block;
+}
+
+.subscription-home {
+  background-color: #ffebeb;
+  background-color: #d5cdcd;
+  background-color: #ffe8d6;
+}
+
+.btn-subscription {
+  /* background-color: black; */
+  /* border: 1px solid black; */
+  background-color: transparent;
+  border: none;
+  margin-top: 0;
+}
+
+.site-footer {
+  background-color: #e9e5df;
+  background-color: #d5cdcd;
+  background-color: #e1dad1;
+}
+
+.footer-item {
+  display: inline;
+  line-height: 43px;
+}
+
+.footer-item li a {
+  color: black;
+  font-size: 1.8rem;
+}
+
+.header-small {
+  min-height: 300px;
+  background-color: #ffe8d6;
+}
+

@@ -10,20 +10,20 @@ import {ImgGridWithTextData } from "../pages/home/HomeData";
 const ImgGridWithText = () => {
     return (
         <>
-            <div className="container-fluid">
+            <div className="container-fluid mb-5">
                 <div className="row pt-1 pt-md-5 d-flex justify-content-center align-items-center">
-                    <div className="col-11 col-lg-6 mt-5 text-center">
+                    <div className="col-11 col-xl-6 mt-5 text-center">
                         <h2 className="jumbotron-subheader">{ImgGridWithTextData.title}</h2>
                         <h3 className="px-lg-3 mb-3">{ImgGridWithTextData.subtitle}</h3>
                         <p className="mx-lg-5 mt-2 ">{ImgGridWithTextData.text1}</p>
-                        <p className="mx-lg-5 mt-2 d-block d-md-none d-xl-block jumbotron-text">{ImgGridWithTextData.text2}</p>
+                        <p className="mx-lg-5 mt-2 ">{ImgGridWithTextData.text2}</p>
                     </div>
-                    <div className="col-11 col-lg-6 d-flex justify-content-around">
+                    <div className="col-11 col-xl-6">
                         <div className="row">
-                            <div className="col-6 d-flex justify-content-around">
-                                <img src={ImgGridWithTextData.img1} className='img-grid-1 img-fluid'></img>
+                            <div className="col-6">
+                                <img src={ImgGridWithTextData.img1} className='img-grid-1'></img>
                             </div>
-                            <div className="col-6 d-flex justify-content-around">
+                            <div className="col-6">
                                 <div className="row">
                                     <div className='col-12'>
                                             <img src={ImgGridWithTextData.img2} className='img-grid-2 img-fluid'></img>

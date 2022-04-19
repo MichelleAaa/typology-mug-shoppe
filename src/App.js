@@ -1,18 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
-import Navigation from './components/Navbar';
-import Header from './components/Header';
-import Cards from './components/Cards';
-import ImageGridWithText from './components/ImageGridWithText';
+// import HomePage from './pages/home/home';
+import ProductsPage from './pages/products/Products';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <>
-      <Navigation />
-      <Header />
-      <Cards />
-      <ImageGridWithText />
+      <ProductsPage />
+      <Footer />
     </>
   );
 }
