@@ -7,10 +7,11 @@ import Navigation from '../../components/Navbar';
 // import ImageGridWithText from '../../components/ImageGridWithText';
 // import HeadingWithText from '../../components/HeadingWithText';
 // import BeigeBackgroundText from '../../components/BeigeBackgroundText';
-import { HomeTextTypeData, ShoppingPromptData, ProductsCategories, ViewProductButtonData } from './ProductsData';
+import { ProductsDisplayData } from './ProductsData';
 import HeaderSmall from '../../components/HeaderSmall';
 import Sort from '../../components/Sort';
 import Button from '../../components/Button';
+import ProductsGrid from '../../components/ProductsGrid';
 // import SubscriptionLarge from '../../components/SubscriptionLarge';
 
 // const TypologyText = () => {
@@ -47,12 +48,19 @@ import Button from '../../components/Button';
 //     );
 // }
 
+const InitialProducts = () => {
+    return (
+        <ProductsGrid productsData={ProductsDisplayData}/>
+    );
+}
+
 function ProductsPage() {
     return (
         <>
             <Navigation />
             <HeaderSmall />
             <Sort />
+            <InitialProducts />
             {/* <TypologyText />
             <EnclosedCards />
             <ImageGridWithText />
