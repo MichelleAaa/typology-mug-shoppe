@@ -1,6 +1,6 @@
 import React, { Component }  from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import Navigation from '../../components/Navbar';
+
 import Header from '../../components/Header';
 import EnclosedCards from '../../components/EnclosedCards';
 import ImgCards from '../../components/ImgCards';
@@ -48,7 +48,7 @@ const ViewProductsButton =() => {
 function HomePage() {
     return (
         <>
-            <Navigation />
+            {/* <Navigation /> */}
             <Header />
             <TypologyText />
             <EnclosedCards />

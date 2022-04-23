@@ -1,6 +1,5 @@
 import React, { Component }  from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import Navigation from '../../components/Navbar';
 // import Header from '../../components/Header';
 // import EnclosedCards from '../../components/EnclosedCards';
 // import ImgCards from '../../components/ImgCards';
@@ -12,7 +11,7 @@ import HeaderSmall from '../../components/HeaderSmall';
 import Sort from '../../components/Sort';
 import Button from '../../components/Button';
 import ProductsGrid from '../../components/ProductsGrid';
-// import SubscriptionLarge from '../../components/SubscriptionLarge';
+import SubscriptionSmall from '../../components/SubscriptionSmall';
 
 // const TypologyText = () => {
 //     return (
@@ -57,10 +56,10 @@ const InitialProducts = () => {
 function ProductsPage() {
     return (
         <>
-            <Navigation />
             <HeaderSmall />
             <Sort />
             <InitialProducts />
+            <SubscriptionSmall />
             {/* <TypologyText />
             <EnclosedCards />
             <ImageGridWithText />

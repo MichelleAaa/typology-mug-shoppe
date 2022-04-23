@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaInstagramSquare, FaTwitterSquare } from 'react-icons/fa';
 import { ImFacebook2, ImYoutube2, ImPhone } from 'react-icons/im';
 import { HiMailOpen } from 'react-icons/hi';
@@ -10,11 +11,10 @@ const Footer = () => {
                 <div className="row px-0 pt-4 d-flex justify-content-start mx-0">
                     <div className="col-10 col-md-2">
                         <ul className="list-unstyled footer-item">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="aboutus.html">Mugs</a></li>
-                            <li><a href="citytour.html">About</a></li>
-                            <li><a href="seasidetour.html">Contact Us</a></li>
-                            <li><a href="faq.html">Cart</a></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/products">Mugs</Link></li>
+                            <li><Link to="/">About</Link></li>
+                            <li><Link to="/">Contact Us</Link></li>
                         </ul>
                     </div>
                     <div className="col-12 col-md-7 col-lg-5 col-xl-3 text-right d-flex align-items-start justify-content-left">

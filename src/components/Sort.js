@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 // import { AiFillRightSquare } from 'react-icons/ai';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { BsArrowDownCircleFill, BsFillArrowUpCircleFill } from 'react-icons/bs';
+import { FcAlphabeticalSortingAz, FcAlphabeticalSortingZa } from 'react-icons/fc';
 
 const Sort = () => {
     const [dropdownOpen1, setDropdownOpen1] = useState(false);
@@ -16,30 +18,15 @@ const Sort = () => {
     const toggle4 = () => setDropdownOpen4(prevState => !prevState);
 
     return (
-        <div className="container-fluid mt-4 py-5">
-            <div className='row d-none d-sm-flex justify-content-between'>
-                <div className="col-4 text-right">
+        <div className="container-fluid mt-1 pt-4 pb-5">
+            <div className='row d-none d-sm-flex justify-content-center mx-5'>
+                <div className="col-12 d-flex justify-content-end sort-wrapper">
 
-                    <Dropdown isOpen={dropdownOpen1} toggle={toggle1} className="d-none d-sm-block">
+                    <Dropdown direction='left' isOpen={dropdownOpen1} toggle={toggle1} className="d-none d-sm-block">
                         <DropdownToggle caret className='dropdown-filter' >
                             Personality Type
                         </DropdownToggle>
-                        <DropdownMenu modifiers={{
-                            setMaxHeight: {
-                                enabled: true,
-                                order: 890,
-                                fn: (data) => {
-                                return {
-                                    ...data,
-                                    styles: {
-                                    ...data.styles,
-                                    overflow: 'auto',
-                                    maxHeight: '500px',
-                                    },
-                                };
-                                },
-                            },
-                            }}>
+                        <DropdownMenu className='drop-menu'>
                             <DropdownItem>ENFJ</DropdownItem>
                             <DropdownItem>ENFP</DropdownItem>
                             <DropdownItem>ENTJ</DropdownItem>
@@ -58,9 +45,9 @@ const Sort = () => {
                             <DropdownItem>ISTJ</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
-                </div>
-                <div className="col-4 text-center">
-                    <Dropdown isOpen={dropdownOpen2} toggle={toggle2} className="d-none d-sm-block">
+                {/* </div>
+                <div className="col-4 text-center"> */}
+                    <Dropdown direction='left' isOpen={dropdownOpen2} toggle={toggle2} className="d-none d-sm-block">
                         <DropdownToggle caret className='dropdown-filter'>
                             Cup Type
                         </DropdownToggle>
@@ -69,17 +56,17 @@ const Sort = () => {
                             <DropdownItem>Tall</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
-                </div>
-                <div className="col-4 text-left">
-                    <Dropdown isOpen={dropdownOpen3} toggle={toggle3} className="d-none d-sm-block">
+                {/* </div>
+                <div className="col-4 text-right"> */}
+                    <Dropdown direction='left' isOpen={dropdownOpen3} toggle={toggle3} className="d-none d-sm-block">
                         <DropdownToggle caret className='dropdown-filter'>
                             Sort By
                         </DropdownToggle>
                         <DropdownMenu>
-                            <DropdownItem>Price - Low to High</DropdownItem>
-                            <DropdownItem>Price - High to Low</DropdownItem>
-                            <DropdownItem>Name - A-Z</DropdownItem>
-                            <DropdownItem>Name - Z-A</DropdownItem>
+                            <DropdownItem>Price: <BsArrowDownCircleFill/></DropdownItem>
+                            <DropdownItem>Price: <BsFillArrowUpCircleFill/></DropdownItem>
+                            <DropdownItem>Name: <FcAlphabeticalSortingAz/></DropdownItem>
+                            <DropdownItem>Name: <FcAlphabeticalSortingZa/></DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
                 </div>
@@ -93,16 +80,22 @@ const Sort = () => {
                         </DropdownToggle>
                         <DropdownMenu>
                             <DropdownItem header>Sort By</DropdownItem>
-                            <DropdownItem>Price - Low to High</DropdownItem>
-                            <DropdownItem>Price - High to Low</DropdownItem>
-                            <DropdownItem>Name - A-Z</DropdownItem>
-                            <DropdownItem>Name - Z-A</DropdownItem>
+                            <DropdownItem>Price: <BsArrowDownCircleFill/></DropdownItem>
+                            <DropdownItem>Price: <BsFillArrowUpCircleFill/></DropdownItem>
+                            <DropdownItem>Name: <FcAlphabeticalSortingAz/></DropdownItem>
+                            <DropdownItem>Name: <FcAlphabeticalSortingZa/></DropdownItem>
                             <DropdownItem divider />
                             <DropdownItem header>Cup Type</DropdownItem>
                             <DropdownItem>Classic</DropdownItem>
                             <DropdownItem>Tall</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
+                </div>
+            </div>
+
+            <div className='row d-none d-sm-flex justify-content-center mx-5'>
+                <div className="col-12 pt-2 px-3">
+                    <hr/>
                 </div>
             </div>
         </div>
