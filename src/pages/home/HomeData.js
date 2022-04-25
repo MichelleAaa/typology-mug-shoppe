@@ -11,7 +11,10 @@ import img3 from '../../assets/page-img/infp-pour-cropped.png';
 
 export const HeaderButton = {
     id: 0,
-    text: 'View Our Selection Now'
+    text: 'View Our Selection Now',
+    btnClass: 'outline-btn',
+    linkClass: 'outline-link',
+    link: '/products'
 }
 
 export const HomeCardsData = [
@@ -98,5 +101,9 @@ export const ProductsCategories = [
 
 export const ViewProductButtonData = {
     id: 0,
-    text: 'View All Products'
+    text: 'View All Products',
+    btnClass: 'outline-btn',
+    linkClass: 'outline-link',
+    link: '/products'
 };
+

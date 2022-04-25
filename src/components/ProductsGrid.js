@@ -27,10 +27,11 @@ const Product = ({product}) => {
 
                                 {/* <h5 className='text-wrapper-1'>{product.name}</h5> */}
                                 <h5 className="text-wrapper-2">{formatPrice(product.price)}</h5>
-
-                        <div className="overlay">
-                            <BiSearchAlt2 size='50px' className='hidden' />
-                        </div>
+                        <Link to={`/products/${product.id}`}>
+                            <div className="overlay">
+                                <BiSearchAlt2 size='50px' className='hidden' />
+                            </div>
+                        </Link>
                     </div>
                     {/* <div classname="text-wrapper-2">
                             <div className="d-flex justify-content-between align-items-end product-text">

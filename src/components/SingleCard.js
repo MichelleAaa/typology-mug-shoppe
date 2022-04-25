@@ -1,11 +1,11 @@
-import React, { Component }  from 'react';
+import React  from 'react';
 import { IconContext}  from 'react-icons';
 import {  Card, CardBody, CardTitle, CardSubtitle, CardText, CardImg } from 'reactstrap';
 
 const SingleCard = ({cardInfo}) => {
     return (
         <div className="col-12 col-md-6 col-xl-3 mb-3">
-        <Card>
+            <Card>
                 <CardBody className="text-center">
                     { cardInfo.icon ? <Icon cardInfo={cardInfo} /> : <Image cardInfo={cardInfo} /> }
                     

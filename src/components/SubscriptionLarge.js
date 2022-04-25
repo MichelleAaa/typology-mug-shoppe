@@ -9,7 +9,7 @@ const SubscriptionLarge = () => {
                     <h4>Sign up to receive our newsletter for exclusive offers</h4>
                     <p>Never miss a sale, sign up today!</p>
                         <form>
-                            <div d-flex align-items-center>
+                            <div className='d-flex align-items-center'>
                             <input type='email' placeholder="enter email" className='align-middle mr-0'></input>
                             <button type='submit' className='btn-subscription m-0 p-0'><AiFillRightSquare size='50px' margin='0' padding='0' /></button>
                             </div>
