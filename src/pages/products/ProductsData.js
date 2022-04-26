@@ -1391,3 +1391,54 @@ export const IndividualProductData = [
         cupCategory: 'Tall'
     }
 ]
+
+export const TypeNameDetail = [
+    {
+        id: 0,
+        letter: 'E',
+        name: 'Extroversion',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit architecto quam eos eaque.'
+    },
+    {
+        id: 1,
+        letter: 'I',
+        name: 'Introversion',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit architecto quam eos eaque.'
+    },
+    {
+        id: 2,
+        letter: 'S',
+        name: 'Sensing',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit architecto quam eos eaque.'
+    },
+    {
+        id: 3,
+        letter: 'N',
+        name: 'Intuition',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit architecto quam eos eaque.'
+    },
+    {
+        id: 4,
+        letter: 'F',
+        name: 'Feeling',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit architecto quam eos eaque.'
+    },
+    {
+        id: 5,
+        letter: 'T',
+        name: 'Thinking',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit architecto quam eos eaque.'
+    },
+    {
+        id: 6,
+        letter: 'J',
+        name: 'Judging',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit architecto quam eos eaque.'
+    },
+    {
+        id: 7,
+        letter: 'P',
+        name: 'Perceiving',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit architecto quam eos eaque.'
+    }
+]
