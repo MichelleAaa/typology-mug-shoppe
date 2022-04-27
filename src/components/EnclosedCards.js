@@ -38,9 +38,9 @@ const EnclosedCards = () => {
         {/* <div className='diamond-clip-wrapper'> 
             <div className="diamond-clip-right"></div>
         </div> */}
-        <div className='diamond-clip-wrapper'> 
+        {/* <div className='diamond-clip-wrapper'> 
             <div className="diamond-clip-right"></div>
-        </div>
+        </div> */}
         </>
     );
 }

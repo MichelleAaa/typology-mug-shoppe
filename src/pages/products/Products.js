@@ -1,23 +1,17 @@
 import React, { Component }  from 'react';
 import { BrowserRouter } from 'react-router-dom';
-// import Header from '../../components/Header';
-// import EnclosedCards from '../../components/EnclosedCards';
-// import ImgCards from '../../components/ImgCards';
-// import ImageGridWithText from '../../components/ImageGridWithText';
-// import HeadingWithText from '../../components/HeadingWithText';
-// import BeigeBackgroundText from '../../components/BeigeBackgroundText';
-import { ProductsDisplayData } from './ProductsData';
+import { ProductsDisplayData, ProductHeaderData } from './ProductsData';
 import HeaderSmall from '../../components/HeaderSmall';
 import Sort from '../../components/Sort';
 import Button from '../../components/Button';
 import ProductsGrid from '../../components/ProductsGrid';
 import SubscriptionSmall from '../../components/SubscriptionSmall';
 
-// const TypologyText = () => {
-//     return (
-//         <HeadingWithText textData={HomeTextTypeData} />
-//     )
-// }
+const ProductsHeader = () => {
+    return (
+        <HeaderSmall headerData={ProductHeaderData} />
+    )
+}
 
 // const ShoppingPrompt = () => {
 //     return (
@@ -56,7 +50,7 @@ const InitialProducts = () => {
 function ProductsPage() {
     return (
         <>
-            <HeaderSmall />
+            <ProductsHeader />
             <Sort />
             <InitialProducts />
             <SubscriptionSmall />

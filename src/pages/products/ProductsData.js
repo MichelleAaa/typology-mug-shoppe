@@ -136,6 +136,19 @@ import istptall3 from '../../assets/cup-img/ISTP/tall/istp3.jpg';
 import istptall4 from '../../assets/cup-img/ISTP/tall/istp4.jpg';
 
 
+import headerimg1 from '../../assets/page-img/esfj-table.png';
+import headerimg3 from '../../assets/page-img/infp-pour-cropped.png';
+import headerimg2 from '../../assets/page-img/intj-leaves.png';
+
+export const ProductHeaderData = {
+    img1: headerimg1,
+    img2: headerimg2,
+    img3: headerimg3,
+    title: 'Products',
+    subtitle: 'Browse our wide selection of mugs below.',
+    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam voluptates deleniti cum rem a?'
+}
+
 export const ProductsDisplayData = [
     {
         id: 100,
@@ -1442,3 +1455,4 @@ export const TypeNameDetail = [
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit architecto quam eos eaque.'
     }
 ]
+

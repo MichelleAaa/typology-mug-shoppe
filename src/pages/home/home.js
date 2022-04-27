@@ -5,13 +5,19 @@ import ImgCards from '../../components/ImgCards';
 import ImageGridWithText from '../../components/ImageGridWithText';
 import HeadingWithText from '../../components/HeadingWithText';
 import BeigeBackgroundText from '../../components/BeigeBackgroundText';
-import { HomeTextTypeData, ShoppingPromptData, ProductsCategories, ViewProductButtonData } from './HomeData';
+import { HomeTextTypeData, ShoppingPromptData, ProductsCategories, ViewProductButtonData, ImgGridWithTextData } from './HomeData';
 import Button from '../../components/Button';
 import SubscriptionLarge from '../../components/SubscriptionLarge';
 
 const TypologyText = () => {
     return (
         <HeadingWithText textData={HomeTextTypeData} />
+    )
+}
+
+const MugsDetailData = () => {
+    return (
+        <ImageGridWithText textData={ImgGridWithTextData} />
     )
 }
 
@@ -49,7 +55,8 @@ function HomePage() {
             <Header />
             <TypologyText />
             <EnclosedCards />
-            <ImageGridWithText />
+            {/* <ImageGridWithText /> */}
+            <MugsDetailData />
             <ShoppingPrompt />
             <ProductCards />
             <ViewProductsButton />

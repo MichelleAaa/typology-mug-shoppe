@@ -13,8 +13,8 @@ const Footer = () => {
                         <ul className="list-unstyled footer-item">
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/products">Mugs</Link></li>
-                            <li><Link to="/">About</Link></li>
-                            <li><Link to="/">Contact Us</Link></li>
+                            <li><Link to="/about">About</Link></li>
+                            <li><Link to="/contact">Contact Us</Link></li>
                         </ul>
                     </div>
                     <div className="col-12 col-md-7 col-lg-5 col-xl-3 text-right d-flex align-items-start justify-content-left">
