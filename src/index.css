@@ -675,16 +675,15 @@ hr {
 }
 
 .text-wrapper-2 {
-position: absolute;
-right: 5px;
-bottom: 4px;
-color: #5f596a;
-color: #ebe6e6;
-color: #c2bebe;
-color: #adaaaa;
-/* font-weight: bold; */
-font-family: 'Montserrat',
-sans-serif;
+  position: absolute;
+  right: 5px;
+  bottom: 4px;
+  color: #5f596a;
+  color: #ebe6e6;
+  color: #c2bebe;
+  color: #adaaaa;
+  /* font-weight: bold; */
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* .product-text h5 {
@@ -813,3 +812,91 @@ sans-serif;
   object-fit: cover;
   border-radius: 10px;
 }
+
+.form-control {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1.5px solid black;
+}
+
+.form-control:focus {
+  border: none;
+  border-bottom: 3px solid #e9e5df;
+  box-shadow: none;
+}
+
+.contact-title {
+  font-size: 3rem;
+}
+
+.contact-btn {
+  background-color: #e9e5df;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #cecac4;
+  font-weight: bold;
+  color:#5f596a;
+}
+
+.contact-btn:hover {
+  background-color: #d4d0cb;
+}
+
+.contactus-form .form-group input, .contactus-form .form-group label {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.faq-category header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.question header {
+  margin-left: 30px;
+}
+
+.faq-answer {
+  margin-left: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Source Serif Pro', sans-serif;
+  font-family: 'nunito', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  /* color: gray; */
+  font-size: 1.2rem;
+}
+
+.faq-category header button, .question header button {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.2;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #d4d0cb;
+}
+
+.faq-category header button:focus,
+.question header button:focus {
+  border-bottom: 1px solid #d4d0cb;
+}
+
+.faq-category header button {
+  color: #5f596a;
+  font-size: 2rem;
+}
+
+.question header button {
+  color: gray;
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+.faq-category-title:focus, .faq-category-title:hover {
+  border: none;
+  box-shadow: none;
+}
+

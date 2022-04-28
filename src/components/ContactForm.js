@@ -17,10 +17,11 @@ const ContactForm = () => {
     return (
         <div className="container-fluid ">
             <div className="row d-flex justify-content-center">
-                <div className="col-11 col-sm-6 text-center home-about mt-4 py-5">
-                    <h2 className="beige-section-title pb-4">Send Us your Questions and Feedback</h2>
-                    <form onSubmit={(e) => handleSubmit(e)}>
-                        <div className="form-group">
+                <div className="col-11 col-lg-6 text-center home-about mt-4 py-5">
+                    <h2 className="contact-title pb-5">Send Us Your Questions and Feedback</h2>
+                    <form onSubmit={(e) => handleSubmit(e)} className='contactus-form text-left'>
+                        <div className="row form-group">
+                            <div className="col">
                             <label htmlFor="first-name">First Name</label>
                             <input className="form-control"
                                 type="text"
@@ -30,8 +31,8 @@ const ContactForm = () => {
                                 onChange={(e) => handleInputChange(e)}
                                 required
                             />
-                        </div>
-                        <div className="form-group">
+                            </div>
+                            <div className="col">
                             <label htmlFor="last-name">Last Name</label>
                             <input className="form-control"
                                 type="text"
@@ -41,23 +42,40 @@ const ContactForm = () => {
                                 onChange={(e) => handleInputChange(e)}
                                 required
                             />
+                            </div>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="exampleFormControlInput1">Email</label>
+                            
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="email">Email</label>
                             <input className="form-control"
                                 type="email"
                                 name="email"
+                                id='email'
                                 // value='email'
                                 onChange={(e) => handleInputChange(e)}
                                 required
                             />
                         </div>
                         <div className="form-group">
-                                <label htmlFor="exampleFormControlTextarea1">Comments</label>
-                                <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" name="comment" onChange={(e) => handleInputChange(e)}></textarea>
-                            </div>
-                        <input type="submit" value="Submit" />
-                        </form>
+                            <label htmlFor="phone">Phone (Optional)</label>
+                            <input className="form-control"
+                                type="tel"
+                                name="phone"
+                                id='phone'
+                                // value='email'
+                                onChange={(e) => handleInputChange(e)}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="comment">Comments</label>
+                            <textarea className="form-control" id="comment" rows="5" name="comment" onChange={(e) => handleInputChange(e)}></textarea>
+                        </div>
+                        <div className="form-group text-center pt-3">
+                            <input type="submit" value="Submit" className='contact-btn' />
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

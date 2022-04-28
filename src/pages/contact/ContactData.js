@@ -7,7 +7,7 @@ export const ContactHeaderData = {
     img2: headerimg2,
     img3: headerimg3,
     title: 'Contact Us',
-    subtitle: 'Please feel free to reach out to us. We are here to answer any questions you may have about our Products.',
+    subtitle: 'Please feel free to reach out to us if you have any questions or feedback',
     text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. ',
     button: {
         id: 0,
@@ -17,3 +17,61 @@ export const ContactHeaderData = {
         link: '/products'
     }
 }
+
+export const AccordionFAQData = [
+        {   id: 0,
+            title: 'ORDERING',
+            questions: [
+            {
+                id: 0,
+                title: 'How do I place an order?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
+            },
+            {
+                id: 2,
+                title: 'How can I update an order I already placed?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
+            },
+            {
+                id: 3,
+                title: 'I need to change something about my order. What can I do?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
+            },
+        ]
+    },
+        {   id: 1,
+            title: 'SHIPPING',
+            questions: [
+            {
+                id: 0,
+                title: 'How long does it take to ship?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
+            },
+            {
+                id: 2,
+                title: 'What if my package is lost in shipment?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
+            },
+            {
+                id: 3,
+                title: 'Do you ship to P.O. Boxes?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
+            },
+        ]
+    },
+        {   id: 2,
+            title: 'RETURNS',
+            questions: [
+            {
+                id: 0,
+                title: 'What is your refund policy?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
+            },
+            {
+                id: 2,
+                title: 'When do I need to request a refund by?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
+            }
+        ]
+    }
+]

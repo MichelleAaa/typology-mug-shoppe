@@ -6,6 +6,7 @@ import HeadingWithText from '../../components/HeadingWithText';
 import BeigeBackgroundText from '../../components/BeigeBackgroundText';
 import ImgGridWithText from '../../components/ImageGridWithText';
 import SubscriptionSmall from '../../components/SubscriptionSmall';
+import ContactAccordion from '../../components/ContactAccordion';
 
 const ContactHeader = () => {
     return (
@@ -37,9 +38,8 @@ function ContactPage() {
             <ContactHeader />
             <div className="py-5"></div>
             <ContactForm />
-            {/* <AboutTextDetail /> */}
             <div className="pt-5"></div>
-            {/* <RefundDetail /> */}
+            <ContactAccordion />
             <div className="pt-5"></div>
             {/* <AboutImgGrid /> */}
             <SubscriptionSmall />

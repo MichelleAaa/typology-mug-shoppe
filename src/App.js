@@ -1,5 +1,6 @@
+import React from 'react';
 import logo from './logo.svg';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Outlet } from 'react-router-dom';
 import ScrollToTop from "./utils/ScrollToTop";
 import Navigation from './components/Navbar';
 import HomePage from './pages/home/home';
@@ -9,28 +10,151 @@ import ProductsPage from './pages/products/Products';
 import Footer from './components/Footer';
 import SingleProduct from './components/SingleProduct';
 // import ProductsGrid from './components/SingleProduct';
+import { motion } from "framer-motion";
+
 import './App.css';
 
-function App() {
+const PageLayout = ({ children }) => children;
+
+const pageVariants = {
+  initial: {
+    opacity: 0
+  },
+  in: {
+    opacity: 1
+  },
+  out: {
+    opacity: 0
+  }
+};
+
+const pageTransition = {
+  type: "spring",
+  ease: "linear",
+  damping: 10,
+  stiffness: 50,
+  // duration: 1
+};
+
+const AnimationLayout = () => {
+  const { pathname } = useLocation();
   return (
-    <>
+    <PageLayout>
+      <motion.div
+        key={pathname}
+        initial="initial"
+        animate="in"
+        variants={pageVariants}
+        transition={pageTransition}
+      >
+        <Outlet />
+      </motion.div>
+    </PageLayout>
+  );
+};
+
+// export const AnimatedRoutes = () => {
+//   const location = useLocation();
+
+//   return (
+//     <AnimatePresence exitBeforeEnter>
+//       <Routes location={location} key={location.pathname}>
+//         <Route element={<Wrapper />}>
+//           <Route path='/' element={<HomePage />}/>
+//           <Route index element={<HomePage />} />
+//           <Route path='products' element={<ProductsPage />} />
+//           <Route index element={<ProductsPage />} /> 
+//           <Route exact path='products/:productId' element={<SingleProduct />} />
+//           <Route path='about' element={<AboutPage />}/>
+//           <Route path='contact' element={<ContactPage />}/>
+//         </Route>
+//       </Routes>
+//     </AnimatePresence>
+//   );
+// };
+
+function App() {
+  // const location = useLocation();
+  return (
     <BrowserRouter>
       <Navigation />
       <Routes>
-        <Route path='/' element={<HomePage />}/>
-        <Route index element={<HomePage />} />
-        <Route path='products' element={<ProductsPage />} />
+        <Route element={<AnimationLayout />}>
+          <Route path='/' element={<HomePage />}/>
+          <Route index element={<HomePage />} />
+          <Route path='products' element={<ProductsPage />} />
           <Route index element={<ProductsPage />} /> 
           <Route exact path='products/:productId' element={<SingleProduct />} />
-        <Route path='about' element={<AboutPage />}/>
-        <Route path='contact' element={<ContactPage />}/>
+          <Route path='about' element={<AboutPage />}/>
+          <Route path='contact' element={<ContactPage />}/>
+        </Route>
       </Routes>
-        <ScrollToTop>
-          <Footer />
+      <ScrollToTop>
+        <Footer />
       </ScrollToTop>
     </BrowserRouter>
-    </>
   );
 }
+
+
+// function Data() {
+//     const location = useLocation();
+//   return (
+//     <>
+//       <TransitionGroup>
+//       <CSSTransition key={location.key} in={true}
+//                    timeout={500}
+//                    classNames="fade">
+//         <Routes location={location}>
+//         <Route path='/' element={<HomePage />}/>
+//         <Route index element={<HomePage />} />
+//         <Route path='products' element={<ProductsPage />} />
+//           <Route index element={<ProductsPage />} /> 
+//           <Route exact path='products/:productId' element={<SingleProduct />} />
+//         <Route path='about' element={<AboutPage />}/>
+//         <Route path='contact' element={<ContactPage />}/>
+//       </Routes>
+//       </CSSTransition>
+//     </TransitionGroup>
+//     </>
+//   );
+// }
+
+// function App() {
+//     // const location = useLocation();
+//   return (
+//     <>
+//     <BrowserRouter>
+//       <Navigation />
+//       <Data/>
+//         <ScrollToTop>
+//           <Footer />
+//       </ScrollToTop>
+//     </BrowserRouter>
+//     </>
+//   );
+// }
+
+// function App() {
+//   return (
+//     <>
+//     <BrowserRouter>
+//       <Navigation />
+//       <Routes>
+//         <Route path='/' element={<HomePage />}/>
+//         <Route index element={<HomePage />} />
+//         <Route path='products' element={<ProductsPage />} />
+//           <Route index element={<ProductsPage />} /> 
+//           <Route exact path='products/:productId' element={<SingleProduct />} />
+//         <Route path='about' element={<AboutPage />}/>
+//         <Route path='contact' element={<ContactPage />}/>
+//       </Routes>
+//         <ScrollToTop>
+//           <Footer />
+//       </ScrollToTop>
+//     </BrowserRouter>
+//     </>
+//   );
+// }
 
 export default App;
