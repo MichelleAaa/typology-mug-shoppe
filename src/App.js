@@ -9,6 +9,7 @@ import ContactPage from './pages/contact/contact';
 import ProductsPage from './pages/products/Products';
 import Footer from './components/Footer';
 import SingleProduct from './components/SingleProduct';
+import CartPage from './pages/cart/cart';
 // import ProductsGrid from './components/SingleProduct';
 import { motion } from "framer-motion";
 
@@ -87,6 +88,7 @@ function App() {
           <Route exact path='products/:productId' element={<SingleProduct />} />
           <Route path='about' element={<AboutPage />}/>
           <Route path='contact' element={<ContactPage />}/>
+          <Route path='cart' element={<CartPage />}/>
         </Route>
       </Routes>
       <ScrollToTop>
@@ -95,66 +97,5 @@ function App() {
     </BrowserRouter>
   );
 }
-
-
-// function Data() {
-//     const location = useLocation();
-//   return (
-//     <>
-//       <TransitionGroup>
-//       <CSSTransition key={location.key} in={true}
-//                    timeout={500}
-//                    classNames="fade">
-//         <Routes location={location}>
-//         <Route path='/' element={<HomePage />}/>
-//         <Route index element={<HomePage />} />
-//         <Route path='products' element={<ProductsPage />} />
-//           <Route index element={<ProductsPage />} /> 
-//           <Route exact path='products/:productId' element={<SingleProduct />} />
-//         <Route path='about' element={<AboutPage />}/>
-//         <Route path='contact' element={<ContactPage />}/>
-//       </Routes>
-//       </CSSTransition>
-//     </TransitionGroup>
-//     </>
-//   );
-// }
-
-// function App() {
-//     // const location = useLocation();
-//   return (
-//     <>
-//     <BrowserRouter>
-//       <Navigation />
-//       <Data/>
-//         <ScrollToTop>
-//           <Footer />
-//       </ScrollToTop>
-//     </BrowserRouter>
-//     </>
-//   );
-// }
-
-// function App() {
-//   return (
-//     <>
-//     <BrowserRouter>
-//       <Navigation />
-//       <Routes>
-//         <Route path='/' element={<HomePage />}/>
-//         <Route index element={<HomePage />} />
-//         <Route path='products' element={<ProductsPage />} />
-//           <Route index element={<ProductsPage />} /> 
-//           <Route exact path='products/:productId' element={<SingleProduct />} />
-//         <Route path='about' element={<AboutPage />}/>
-//         <Route path='contact' element={<ContactPage />}/>
-//       </Routes>
-//         <ScrollToTop>
-//           <Footer />
-//       </ScrollToTop>
-//     </BrowserRouter>
-//     </>
-//   );
-// }
 
 export default App;

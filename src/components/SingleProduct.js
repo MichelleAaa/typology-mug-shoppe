@@ -1,37 +1,23 @@
-import React, { useEffect, useState} from 'react';
-import { Link, useParams, useHistory } from 'react-router-dom';
-import { formatPrice } from '../utils/FormatPrice';
+import React, { useState} from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/cartSlice';
+import { FormatPrice } from '../utils/FormatPrice';
 // import { Loading, Error } from '../components';
-import { IndividualProductData, TypeNameDetail } from '../pages/products/ProductsData';
+import { useSelector } from 'react-redux';
+import { TypeNameDetail } from '../pages/products/ProductsData';
 import SubscriptionSmall from "./SubscriptionSmall";
 
 const SingleProduct = () => {
     const { productId } = useParams();
-    console.log(typeof(productId));
-    // const history = useHistory();
 
-    const product = IndividualProductData.find((product) => product.id === parseInt(productId));
-    console.log(product);
-    // useEffect(() => {
-    // fetchSingleProduct(`${url}${id}`)
-    // }, [id])
+    const product = useSelector(state => state.products.productList).find((product) => product.id === parseInt(productId));
 
+    const dispatch = useDispatch();
 
-    // useEffect(() => {
-    //     if (error) {
-    //         setTimeout(() => {
-    //             history.push('/')
-    //         }, 3000)
-    //         }
-    // }, [error])
-
-    // if (Loading) {
-    //     return <Loading />
-    // }
-
-    // if (error) {
-    //     return <Error />
-    // }
+    const HandleAddToCart = (product) => {
+        dispatch(addToCart(product));
+    }
 
     return (
         <React.Fragment>
@@ -53,17 +39,12 @@ const SingleProduct = () => {
                         <h1 className='product-header'>{product.name}</h1>
                         <p>{product.description}</p>
                         <p><strong>Availability:</strong> {product.stock} in stock</p>
-                        <p><strong>Price:</strong> {formatPrice(product.price)}</p>
+                        <p><strong>Price:</strong> {FormatPrice(product.price)}</p>
                         <hr />
-                        { product.stock > 0 ? <button type='button' className={"mt-4 btn btn-main outline-btn"}> Add to Cart</button> : <button type='button' className="mt-4 btn btn-main"> Join Waiting List to be Notified when this Product is Available</button>}
+                        { product.stock > 0 ? <button type='button' className={"mt-4 btn btn-main outline-btn"} onClick={() => HandleAddToCart(product)}> Add to Cart</button> : <button type='button' className="mt-4 btn btn-main"> Join Waiting List to be Notified when this Product is Available</button>}
                     </div>
                 </div>
             </div>
-            {/* <div className='row mt-5 d-flex justify-content-center px-2 px-md-5 px-lg-1'>
-                <div className='col-11'>
-                    <hr/>
-                </div>
-            </div> */}
             <ProductDetail product={product} />
             <SubscriptionSmall />
         </React.Fragment>

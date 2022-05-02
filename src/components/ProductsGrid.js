@@ -1,11 +1,13 @@
 import React, { Component }  from 'react';
 import {  Card, CardBody, CardTitle, CardSubtitle, CardText, CardImg } from 'reactstrap';
-import { formatPrice } from '../utils/FormatPrice';
-// import { BiSearchAlt } from 'react-icons/bi';
+import { FormatPrice } from '../utils/FormatPrice';
+import { useSelector } from 'react-redux';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 
-const ProductsGrid = ({productsData}) => {
+const ProductsGrid = () => {
+const productsData = useSelector(state => state.products.productsList);
+
     return (
         <div className='container-fluid'>
             <div className="row d-flex justify-content-center align-items-center mx-1 mx-md-3 mx-lg-5 px-md-5">
@@ -26,7 +28,7 @@ const Product = ({product}) => {
                         <img src={product.img} alt={product.name} className="products-grid-img"/>
 
                                 {/* <h5 className='text-wrapper-1'>{product.name}</h5> */}
-                                <h5 className="text-wrapper-2">{formatPrice(product.price)}</h5>
+                                <h5 className="text-wrapper-2">{FormatPrice(product.price)}</h5>
                         <Link to={`/products/${product.id}`}>
                             <div className="overlay">
                                 <BiSearchAlt2 size='50px' className='hidden' />

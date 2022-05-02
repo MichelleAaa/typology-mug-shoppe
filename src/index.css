@@ -3,8 +3,7 @@ body {
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
-    font-family: 'Source Serif Pro',
-    serif;
+    font-family: 'Source Serif Pro', serif;
     font-size: 1.5rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -877,6 +876,7 @@ hr {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #d4d0cb;
+  border-radius: 0;
 }
 
 .faq-category header button:focus,
@@ -900,3 +900,23 @@ hr {
   box-shadow: none;
 }
 
+.cart-wrapper {
+  min-height: 80vh;
+}
+
+.cart-img {
+  display: block;
+  width: 100%;
+}
+
+.amount-btn {
+  border: none;
+  background-color: transparent;
+  font-size: .9rem;
+}
+
+.cart-amount {
+  font-family: 'nunito', sans-serif;
+  font-family: 'Source Serif Pro', serif;
+  font-size: 1.23rem;
+}

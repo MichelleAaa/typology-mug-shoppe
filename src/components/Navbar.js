@@ -43,7 +43,7 @@ const Navigation = () => {
                         </NavLink>
                     </NavItem>
                         <NavItem>
-                            <NavLink to="/">
+                            <NavLink to="/cart/">
                                 <FaShoppingCart /> Cart
                             </NavLink>
                         </NavItem>
