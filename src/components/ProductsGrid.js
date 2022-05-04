@@ -1,4 +1,4 @@
-import React, { Component }  from 'react';
+import React, { Component, useEffect }  from 'react';
 import {  Card, CardBody, CardTitle, CardSubtitle, CardText, CardImg } from 'reactstrap';
 import { FormatPrice } from '../utils/FormatPrice';
 import { useSelector } from 'react-redux';
@@ -6,7 +6,7 @@ import { BiSearchAlt2 } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 
 const ProductsGrid = () => {
-const productsData = useSelector(state => state.products.productsList);
+const productsData = useSelector(state => state.products.filteredProducts);
 
     return (
         <div className='container-fluid'>

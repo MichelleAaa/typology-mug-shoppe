@@ -236,7 +236,7 @@ code {
 }
 
 
-.btn-main, .dropdown-filter, .dropdown-filter-small {
+.btn-main, .dropdown-filter, .dropdown-filter-small, .filter-list {
   font-size: 1.4rem;
   background-color: #5f596a;
   background-color: #7f778d;
@@ -258,6 +258,10 @@ code {
   /* sans-serif; */
   font-family: 'Montserrat', sans-serif;
   transition: .3s ease-in-out;
+}
+
+.filter-list {
+  font-size: 1.1rem;
 }
 
 .btn:hover {
