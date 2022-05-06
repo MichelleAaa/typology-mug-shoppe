@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-// import img1 from '../../assets/cup-img/ENFP/classic/enfp7.jpg';
 import { FormatPrice } from '../../utils/FormatPrice';
 import { useSelector, useDispatch } from 'react-redux';
 import { increase, decrease, calculateTotals, removeItem } from '../../redux/cartSlice';
 import Button from '../../components/Button';
+import { Tooltip } from 'reactstrap';
 import { FaTrash } from 'react-icons/fa';
 import { IoIosArrowUp, IoIosArrowDown } from 'react-icons/io';
 
@@ -18,6 +18,9 @@ const CartPage = () => {
     }, [cartData]);
 
     const subTotal = useSelector (state => state.cart.total_price);
+
+    const [tooltipOpen, setTooltipOpen] = useState(false);
+    const toggle = () => setTooltipOpen(!tooltipOpen);
 
     if (cartData.length < 1) {
         return (
@@ -34,8 +37,8 @@ const CartPage = () => {
         );
     }
     return (
-        <main>
-            <div className='container mt-5 pt-5 cart-wrapper'>
+        <main className='cart-wrapper'>
+            <div className='container mt-5 pt-5'>
                 <div className='row py-4 d-flex justify-content-center'>
                     <div className='col-lg-10 '>
                         <h4>Your Items</h4>
@@ -46,7 +49,7 @@ const CartPage = () => {
                 </div>
                 {cartData.map(item => <CartItem key={item.id} itemData={item}/>)}
             </div>
-            <div className='row d-flex justify-content-center py-4'>
+            <div className='row d-flex justify-content-center py-5'>
                 <div className='col-7 col-xl-6 text-right'>
                     <div className='row d-flex justify-content-end pb-5'>
                         <div className='col-md-8 col-xl-5'>
@@ -61,7 +64,11 @@ const CartPage = () => {
                     </div>
                     <div className='row d-flex justify-content-end pb-5'>
                         <div className='col-md-8 col-xl-5'>
-                            <Button buttonData={{id: 0, text: 'Proceed to Checkout', btnClass: 'outline-btn', linkClass: 'outline-link', link: '/'}}/>
+                            <span style={{textDecoration: "underline", color:"blue"}} href="#" id="TooltipExample">
+                                <Button buttonData={{id: 0, text: 'Proceed to Checkout', btnClass: 'outline-btn', linkClass: 'outline-link', link: '/carterror'}}/>
+                            </span>
+                            <Tooltip placement="bottom" isOpen={tooltipOpen} target="TooltipExample" toggle={toggle}>Apologies, but we are unable to accept orders at this time.
+                            </Tooltip>
                         </div>
                     </div>
                 </div>

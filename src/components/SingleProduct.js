@@ -1,9 +1,10 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../redux/cartSlice';
+import {  Modal, ModalHeader, ModalBody, ModalFooter, Button  } from 'reactstrap';
 import { FormatPrice } from '../utils/FormatPrice';
-// import { Loading, Error } from '../components';
+import { BsCheck2All } from 'react-icons/bs';
 import { useSelector } from 'react-redux';
 import { TypeNameDetail } from '../pages/products/ProductsData';
 import SubscriptionSmall from "./SubscriptionSmall";
@@ -18,6 +19,9 @@ const SingleProduct = () => {
     const HandleAddToCart = (product) => {
         dispatch(addToCart(product));
     }
+
+    const [modal, setModal] = useState(false);
+    const toggle = () => setModal(!modal);
 
     return (
         <React.Fragment>
@@ -41,7 +45,38 @@ const SingleProduct = () => {
                         <p><strong>Availability:</strong> {product.stock} in stock</p>
                         <p><strong>Price:</strong> {FormatPrice(product.price)}</p>
                         <hr />
-                        { product.stock > 0 ? <button type='button' className={"mt-4 btn btn-main outline-btn"} onClick={() => HandleAddToCart(product)}> Add to Cart</button> : <button type='button' className="mt-4 btn btn-main"> Join Waiting List to be Notified when this Product is Available</button>}
+                        { product.stock > 0 ? 
+                        <React.Fragment>
+                            <button type='button' className={"mt-4 btn btn-main outline-btn"} 
+                            onClick={() => {HandleAddToCart(product);
+                            toggle();}}> 
+                            Add to Cart
+                            </button>
+                            <Modal isOpen={modal} toggle={toggle} className=''>
+                                <ModalHeader toggle={toggle}> 
+                                <div className='d-flex flex-row justify-content-center align-items-center'>
+                                    <BsCheck2All color='green' margin='auto' /> 
+                                    <p className='my-auto'>Added to Cart:</p>
+                                </div>
+                                </ModalHeader>
+                                <ModalBody>
+                                    <div className='d-flex flex-row justify-content-center align-items-center'>
+                                        <img src={product.img[0].img} alt='Cup' className='product-modal-img' />
+                                        <p className='pl-3 product-modal-text'>{product.name}</p>
+                                </div>
+                                </ModalBody>
+                                <ModalFooter>
+                                <button className="btn btn-main outline-btn">
+                                    <Link to='/cart/' className='outline-link'>
+                                    Go to Cart
+                                    </Link>
+                                </button> 
+                                <Button color="btn btn-main outline-btn" onClick={toggle}>Continue Shopping</Button>
+                                </ModalFooter>
+                            </Modal>
+                        </React.Fragment>
+                        : 
+                        <button type='button' className="mt-4 btn btn-main"> Subscribe to our Newsletter to be Notified when this Product is Available</button>}
                     </div>
                 </div>
             </div>

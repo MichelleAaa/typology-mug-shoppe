@@ -15,16 +15,6 @@ const productsSlice = createSlice({
     name: "products",
     initialState,
     reducers: {
-        // filterPType(state, payload) {
-        //     state.typeFilter.push(payload.payload);
-        //     state.totalFilters.push(payload.payload);
-        //     state.filteredProducts = state.filteredProducts.filter(item => item.typeCategory === payload.payload);
-        // },
-        // filterCupType(state, payload) {
-        //     state.cupFilter.push(payload.payload);
-        //     state.totalFilters.push(payload.payload);
-        //     state.filteredProducts = state.filteredProducts.filter(item => item.cupCategory === payload.payload);
-        // },
         filterProducts(state, payload) {
             if(state.totalFilters.indexOf(payload.payload) !== -1) return;
             state.totalFilters.push(payload.payload);
@@ -33,24 +23,6 @@ const productsSlice = createSlice({
             } else {
                 state.typeFilter.push(payload.payload);
             }
-            // state.filteredProducts = [];
-
-            // let typeTotalArr = [];
-            // if(state.typeFilter.length !== 0){
-            //     for (let i = 0; i < state.typeFilter.length; i++){
-            //         let tempArr = state.productsList.filter(item => item.typeCategory === state.typeFilter[i]);
-            //         typeTotalArr.push(...tempArr);
-            //     }
-            //     state.filteredProducts = typeTotalArr;
-            // }
-            // let cupTotalArr = [];
-            // if(state.cupFilter.length !== 0){
-            //     for (let j = 0; j < state.cupFilter.length; j++){
-            //         let tempArr = state.filteredProducts.filter(item => item.cupCategory === state.cupFilter[j]);
-            //         cupTotalArr.push(...tempArr);
-            //     }
-            //     state.filteredProducts = cupTotalArr;
-            // }
         },
         renderFilter(state) {
             state.filteredProducts = [];
@@ -65,7 +37,7 @@ const productsSlice = createSlice({
             } else {
                 state.filteredProducts = state.productsList;
             }
-            
+
             let cupTotalArr = [];
             if(state.cupFilter.length !== 0){
                 for (let j = 0; j < state.cupFilter.length; j++){
@@ -82,7 +54,6 @@ const productsSlice = createSlice({
             } else {
                 state.typeFilter = state.typeFilter.filter(item => item !== payload.payload);
             }
-            //filter totalFilters as well.
             state.totalFilters = state.totalFilters.filter(item => item !== payload.payload);
         },
 

@@ -20,7 +20,7 @@ const ImgCards = ({cardsData}) => {
                 <div className='col-12 col-sm-11'>
                         <CardGroup className="pt-2 pb-1 my-5 px-4 justify-content-center">
                             {
-                                cardsData.map(card => <SingleCard key={card.id} cardInfo={card}/>)
+                                cardsData.map(card => <SingleCard key={card.id} cardInfo={card} />)
                             }
                         </CardGroup>
                     </div>

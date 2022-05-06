@@ -24,14 +24,6 @@ const Sort = () => {
     let filters = useSelector(state => state.products.totalFilters);
     let dispatch = useDispatch();
 
-    // const HandleFilterPType = (product) => {
-    //     dispatch(filterPType(product));
-    // };
-    // const HandleFilterCupType = (product) => {
-    //     dispatch(filterCupType(product));
-    // };
-
-
     const HandleSort = (filterType) => {
         dispatch(sortProducts(filterType));
     }
@@ -40,12 +32,6 @@ const Sort = () => {
         dispatch(filterProducts(filter));
         dispatch(renderFilter());
     };
-
-    // let dispatch = useDispatch();
-    // const HandleRemoveFilter = (filter) => {
-    //     dispatch(removeSingleFilter(filter));
-    //     dispatch(renderFilter());
-    // };
 
     const HandleReset = () => {
         dispatch(removeAllFilters());
@@ -67,11 +53,6 @@ const Sort = () => {
                     </div>
                 </div>
             <div className='row d-none d-sm-flex justify-content-center mx-5'>
-                {/* <div className="col-12 d-flex justify-content-end filter-list">
-                    <p className='my-auto font-italic'>{filters.map(filter => <ActiveFilters filterType={filter}/>)}</p>
-                        {filters.length !== 0 ? <><span>- Remove All</span><button type='button' className='amount-btn' onClick={() => HandleReset()}><ImCross size='18px' color='red' /></button></> : ''}
-                        
-                </div> */}
                 <div className="col-12 d-flex justify-content-end sort-wrapper">
                     <Dropdown direction='left' isOpen={dropdownOpen1} toggle={toggle1} className="d-none d-sm-block">
                         <DropdownToggle caret className='dropdown-filter' >
@@ -96,8 +77,6 @@ const Sort = () => {
                             <DropdownItem onClick={() => HandleFilterProducts('ISTJ')}>ISTJ</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
-                {/* </div>
-                <div className="col-4 text-center"> */}
                     <Dropdown direction='left' isOpen={dropdownOpen2} toggle={toggle2} className="d-none d-sm-block">
                         <DropdownToggle caret className='dropdown-filter'>
                             Cup Type
@@ -107,8 +86,6 @@ const Sort = () => {
                             <DropdownItem onClick={() => HandleFilterProducts('Tall')}>Tall</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
-                {/* </div>
-                <div className="col-4 text-right"> */}
                     <Dropdown direction='left' isOpen={dropdownOpen3} toggle={toggle3} className="d-none d-sm-block">
                         <DropdownToggle caret className='dropdown-filter'>
                             Sort By
@@ -168,7 +145,6 @@ const ActiveFilters = (filterType) => {
             <p className='my-auto'> 
             {filterType.filterType}</p>
             <button type='button' className='amount-btn' onClick={() => HandleRemoveFilter(filterType.filterType)}><HiOutlineX size='20px' color='gray' /></button>
-            {/* <p className='my-auto'> - </p> */}
         </div>
     );
 }

@@ -9,6 +9,7 @@ import ContactPage from './pages/contact/contact';
 import ProductsPage from './pages/products/Products';
 import Footer from './components/Footer';
 import SingleProduct from './components/SingleProduct';
+import CartError from './components/CartError';
 import CartPage from './pages/cart/cart';
 // import ProductsGrid from './components/SingleProduct';
 import { motion } from "framer-motion";
@@ -89,6 +90,7 @@ function App() {
           <Route path='about' element={<AboutPage />}/>
           <Route path='contact' element={<ContactPage />}/>
           <Route path='cart' element={<CartPage />}/>
+          <Route path='carterror' element={<CartError />}/>
         </Route>
       </Routes>
       <ScrollToTop>

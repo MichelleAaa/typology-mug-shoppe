@@ -7,7 +7,11 @@ import { NavLink } from 'react-router-dom';
 import img1 from '../../assets/page-img/esfj-table.png';
 import img2 from '../../assets/page-img/intj-leaves.png';
 import img3 from '../../assets/page-img/infp-pour-cropped.png';
-// import Button from './Button';
+import img5 from '../../assets/page-img/enfp-sock.png';
+import img7 from '../../assets/page-img/istj-plate.png';
+import img6 from '../../assets/page-img/entp-table.png';
+import img4 from '../../assets/page-img/infj-leaves.png';
+import img8 from '../../assets/page-img/istp-tall.png';
 
 export const HeaderButton = {
     id: 0,
@@ -64,9 +68,9 @@ export const ImgGridWithTextData = {
     subtitle: 'Each Mug displays the perspectives in order of precidence, with the strongest preference at the top.',
     text1: 'According to the theory, the viewpoint we hold most dear and spend the most time seeing life from can be categeorized into one of eight buckets. From there, a second bucket can be found based on the second viewpoint from which we spend the most time. This continues down until there are four perspectives for each type.',
     text2: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus incidunt tempore, maiores omnis sed nesciunt eaque exercitationem deleniti quas, itaque delectus velit autem. Dicta exercitationem optio tenetur iusto eos saepe.',
-    img1: img1,
-    img2: img2,
-    img3: img3
+    img1: img5,
+    img2: img4,
+    img3: img6
 }
 
 export const ShoppingPromptData = {
@@ -83,7 +87,7 @@ export const ShoppingPromptData = {
 export const ProductsCategories = [
     {
         id: 0,
-        img: img1,
+        img: img7,
         alt: 'FILL THIS IN LATER',
         title: 'Classic',
         subtitle: 'A classic mug type',
@@ -91,7 +95,7 @@ export const ProductsCategories = [
     },
     {
         id: 2,
-        img: img2,
+        img: img8,
         alt: 'FILL THIS IN LATER',
         title: 'Tall',
         subtitle: 'A tall mug type',

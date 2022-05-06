@@ -1,10 +1,10 @@
-
-
-
-
 import headerimg1 from '../../assets/page-img/esfj-table.png';
-import headerimg3 from '../../assets/page-img/infp-pour-cropped.png';
 import headerimg2 from '../../assets/page-img/intj-leaves.png';
+import headerimg3 from '../../assets/page-img/infp-pour-cropped.png';
+
+import img1 from '../../assets/page-img//esfp-cookies.png';
+import img2 from '../../assets/page-img/istj-table-cookies.png';
+import img3 from '../../assets/page-img/estj-plant.png';
 
 export const AboutHeaderData = {
     img1: headerimg1,
@@ -57,7 +57,7 @@ export const AboutImgGridData = {
     subtitle: 'Our utilization of the finest ceramic inks results in a final product whose quality is unmatched anywhere in the world.',
     text1: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus incidunt tempore, maiores omnis sed nesciunt eaque exercitationem deleniti quas, itaque delectus velit autem. Dicta exercitationem optio tenetur iusto eos saepe.',
     text2: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus incidunt tempore, maiores omnis sed nesciunt eaque exercitationem deleniti quas, itaque delectus velit autem. Dicta exercitationem optio tenetur iusto eos saepe.',
-    img1: headerimg1,
-    img2: headerimg2,
-    img3: headerimg3
+    img1: img2,
+    img2: img3,
+    img3: img1
 }

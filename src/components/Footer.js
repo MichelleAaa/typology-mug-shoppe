@@ -3,8 +3,15 @@ import { Link } from 'react-router-dom';
 import { FaInstagramSquare, FaTwitterSquare } from 'react-icons/fa';
 import { ImFacebook2, ImYoutube2, ImPhone } from 'react-icons/im';
 import { HiMailOpen } from 'react-icons/hi';
+import { useDispatch } from 'react-redux';
+import { removeAllFilters } from '../redux/productsSlice';
 
 const Footer = () => {
+    let dispatch = useDispatch();
+
+    const HandleProductsClick = () => {
+        dispatch(removeAllFilters());
+    }
     return (
         <footer className="site-footer">
             <div className="container-fluid">
@@ -12,7 +19,7 @@ const Footer = () => {
                     <div className="col-10 col-md-2">
                         <ul className="list-unstyled footer-item">
                             <li><Link to="/">Home</Link></li>
-                            <li><Link to="/products">Mugs</Link></li>
+                            <li><Link to="/products" onClick={() => HandleProductsClick()}>Mugs</Link></li>
                             <li><Link to="/about">About</Link></li>
                             <li><Link to="/contact">Contact Us</Link></li>
                         </ul>

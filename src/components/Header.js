@@ -16,7 +16,7 @@ const Header = () => {
         </div>
         <Jumbotron fluid>
             <div className="container-fluid">
-                <div className="row pt-1 pt-md-5 d-flex justify-content-left align-items-center">
+                <div className="row pt-1 pt-md-2 d-flex justify-content-left align-items-center">
                     <div className="col-12 col-md-6 col-lg-7 col-xl-6 mt-5 pl-xl-5 d-flex justify-content-around">
                         <img src={img3} className='header-img d-none d-lg-block'></img>
                         <img src={img1} className='header-img'></img>

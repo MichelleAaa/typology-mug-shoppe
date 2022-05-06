@@ -55,7 +55,6 @@ function HomePage() {
             <Header />
             <TypologyText />
             <EnclosedCards />
-            {/* <ImageGridWithText /> */}
             <MugsDetailData />
             <ShoppingPrompt />
             <ProductCards />
