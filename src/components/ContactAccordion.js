@@ -44,7 +44,6 @@ const SectionQuestions = ({ questionData }) => {
     return (
         <article className='question'>
         <header>
-            {/* <h4 className='faq-question'>{questionData.title}</h4> */}
             <button type='button' className='btn faq-category-title' onClick={() => setShowInfo(!showInfo)}><span>{questionData.title.toUpperCase() + ' '}</span>
             {showInfo ? <AiOutlineMinus /> : <AiOutlinePlus />}
             </button>

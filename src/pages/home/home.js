@@ -1,4 +1,4 @@
-import React, { Component }  from 'react';
+import React from 'react';
 import Header from '../../components/Header';
 import EnclosedCards from '../../components/EnclosedCards';
 import ImgCards from '../../components/ImgCards';
@@ -53,12 +53,14 @@ function HomePage() {
     return (
         <>
             <Header />
-            <TypologyText />
-            <EnclosedCards />
-            <MugsDetailData />
-            <ShoppingPrompt />
-            <ProductCards />
-            <ViewProductsButton />
+            <main>
+                <TypologyText />
+                <EnclosedCards />
+                <MugsDetailData />
+                <ShoppingPrompt />
+                <ProductCards />
+                <ViewProductsButton />
+            </main>
             <SubscriptionLarge />
         </>
     );

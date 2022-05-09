@@ -7,7 +7,7 @@ const initialState = {
     filteredProducts: ProductsDisplayData,
     typeFilter: [],
     cupFilter: [],
-    sortApplied: [],
+    sortApplied: '',
     totalFilters: [] 
 };
 
@@ -56,10 +56,9 @@ const productsSlice = createSlice({
             }
             state.totalFilters = state.totalFilters.filter(item => item !== payload.payload);
         },
-
-
         sortProducts(state, payload) {
             state.sortApplied = payload.payload;
+            
             if(payload.payload === 'PriceHightoLow'){
                 state.filteredProducts = state.filteredProducts.sort(function(a, b){return b.price - a.price});
             }
@@ -87,7 +86,7 @@ const productsSlice = createSlice({
             state.filteredProducts = state.productsList;
             state.typeFilter = [];
             state.cupFilter = [];
-            state.sortApplied = [];
+            state.sortApplied = '';
             state.totalFilters = [];
         }
     }

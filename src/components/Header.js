@@ -1,7 +1,6 @@
 
-import React, { Component }  from 'react';
+import React from 'react';
 import {  Jumbotron } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
 import img1 from '../assets/page-img/esfj-table.png';
 import img2 from '../assets/page-img/intj-leaves.png';
 import img3 from '../assets/page-img/infp-pour-cropped.png';
@@ -18,9 +17,9 @@ const Header = () => {
             <div className="container-fluid">
                 <div className="row pt-1 pt-md-2 d-flex justify-content-left align-items-center">
                     <div className="col-12 col-md-6 col-lg-7 col-xl-6 mt-5 pl-xl-5 d-flex justify-content-around">
-                        <img src={img3} className='header-img d-none d-lg-block'></img>
-                        <img src={img1} className='header-img'></img>
-                        <img src={img2} className='header-img d-none d-md-block'></img>
+                        <img src={img3} className='header-img d-none d-lg-block' alt='cup'></img>
+                        <img src={img1} className='header-img' alt='cup'></img>
+                        <img src={img2} className='header-img d-none d-md-block' alt='cup'></img>
                     </div>
                     
                     <div className="col-12 col-md-5 col-xl-6 mt-5 text-center">

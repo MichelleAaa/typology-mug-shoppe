@@ -25,7 +25,7 @@ const SingleProduct = () => {
 
     return (
         <React.Fragment>
-            <div className='container-fluid py-5 mt-4'>
+            <main className='container-fluid py-5 mt-4'>
                 <div className='row'>
                     <div className='col-12 d-flex justify-content-start pt-2'>
                         <button className="btn btn-main outline-btn">
@@ -79,7 +79,7 @@ const SingleProduct = () => {
                         <button type='button' className="mt-4 btn btn-main"> Subscribe to our Newsletter to be Notified when this Product is Available</button>}
                     </div>
                 </div>
-            </div>
+            </main>
             <ProductDetail product={product} />
             <SubscriptionSmall />
         </React.Fragment>

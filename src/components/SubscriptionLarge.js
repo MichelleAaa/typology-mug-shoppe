@@ -37,7 +37,7 @@ const SubscriptionLarge = () => {
                                 <ModalHeader toggle={toggle}> 
                                 <div className='d-flex flex-row justify-content-center align-items-center'>
                                     <BsCheck2Circle color='green' margin='auto' />
-                                    <p className='my-auto pl-1'> Subscription Confirmation</p>
+                                    <p className='my-auto pl-1'> Subscription Confirmed</p>
                                 </div>
                                 </ModalHeader>
                                 <ModalBody>
@@ -46,7 +46,7 @@ const SubscriptionLarge = () => {
                                 </div>
                                 </ModalBody>
                                 <ModalFooter>
-                                    <Button color="btn btn-main outline-btn" onClick={toggle}>Continue Browsing</Button>
+                                    <Button color="btn btn-main outline-btn text-dark" onClick={toggle}>Continue Browsing</Button>
                                 </ModalFooter>
                             </Modal>
                 </div>

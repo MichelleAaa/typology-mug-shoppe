@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Navbar, NavbarBrand, NavbarToggler, Nav, NavItem, Collapse } from 'reactstrap';
-import { FaShoppingCart, FaUserPlus } from 'react-icons/fa';
+import { FaShoppingCart } from 'react-icons/fa';
 import Logo from '../assets/Typology.png';
 import { useDispatch } from 'react-redux';
 import { removeAllFilters } from '../redux/productsSlice';
@@ -53,11 +53,6 @@ const Navigation = () => {
                         <NavItem>
                             <NavLink to="/cart/">
                                 <FaShoppingCart /> Cart
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink to="/">
-                                <FaUserPlus /> Login
                             </NavLink>
                         </NavItem>
                 </Nav>

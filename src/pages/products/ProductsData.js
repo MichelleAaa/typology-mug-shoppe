@@ -1,9 +1,3 @@
-import React, { Component }  from 'react';
-import { BiLandscape } from 'react-icons/bi';
-import { FaHandHoldingHeart } from 'react-icons/fa';
-import { GiCompass } from 'react-icons/gi';
-import { AiOutlineQuestionCircle } from 'react-icons/ai';
-import { NavLink } from 'react-router-dom';
 import img1 from '../../assets/cup-img/ISTJ/classic/istj7.jpg';
 import img2 from '../../assets/cup-img/ENFJ/classic/enfj7.jpg';
 import img3 from '../../assets/cup-img/ENFP/classic/enfp7.jpg';
@@ -36,7 +30,6 @@ import img29 from '../../assets/cup-img/INTP/tall/intp1.jpg';
 import img30 from '../../assets/cup-img/ISFJ/tall/isfj1.jpg';
 import img31 from '../../assets/cup-img/ISFP/tall/isfp1.jpg';
 import img32 from '../../assets/cup-img/ISTP/tall/istp1.jpg';
-// import Button from './Button';
 
 import istjclassic1 from '../../assets/cup-img/ISTJ/classic/istj1.jpg';
 import istjclassic2 from '../../assets/cup-img/ISTJ/classic/istj2.jpg';
@@ -134,7 +127,6 @@ import isfptall4 from '../../assets/cup-img/ISFP/tall/isfp4.jpg';
 import istptall2 from '../../assets/cup-img/ISTP/tall/istp2.jpg';
 import istptall3 from '../../assets/cup-img/ISTP/tall/istp3.jpg';
 import istptall4 from '../../assets/cup-img/ISTP/tall/istp4.jpg';
-
 
 import headerimg1 from '../../assets/page-img/esfj-table.png';
 import headerimg3 from '../../assets/page-img/infp-pour-cropped.png';
@@ -733,7 +725,7 @@ export const IndividualProductData = [
             },
             {
                 id: 2,
-                img: infpclassic2,
+                img: infpclassic1,
                 alt: 'INFP Cup Image'
             },
             {
@@ -1292,17 +1284,17 @@ export const IndividualProductData = [
             },
             {
                 id: 2,
-                img: istjtall2,
+                img: intptall2,
                 alt: 'INTP Cup Image'
             },
             {
                 id: 3,
-                img: istjtall3,
+                img: intptall3,
                 alt: 'INTP Cup Image'
             },
             {
                 id: 4,
-                img: istjtall4,
+                img: intptall4,
                 alt: 'INTP Cup Image'
             },
         ],

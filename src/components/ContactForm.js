@@ -27,7 +27,6 @@ const ContactForm = () => {
                                 type="text"
                                 name="first-name"
                                 id="first-name"
-                                // value='name'
                                 onChange={(e) => handleInputChange(e)}
                                 required
                             />
@@ -38,7 +37,6 @@ const ContactForm = () => {
                                 type="text"
                                 name="last-name"
                                 id='last-name'
-                                // value='name'
                                 onChange={(e) => handleInputChange(e)}
                                 required
                             />
@@ -53,7 +51,6 @@ const ContactForm = () => {
                                 type="email"
                                 name="email"
                                 id='email'
-                                // value='email'
                                 onChange={(e) => handleInputChange(e)}
                                 required
                             />
@@ -64,7 +61,6 @@ const ContactForm = () => {
                                 type="tel"
                                 name="phone"
                                 id='phone'
-                                // value='email'
                                 onChange={(e) => handleInputChange(e)}
                             />
                         </div>

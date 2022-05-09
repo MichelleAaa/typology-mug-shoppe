@@ -1,20 +1,11 @@
 
-import React, { Component }  from 'react';
+import React  from 'react';
 import {  CardGroup } from 'reactstrap';
-import { HomeCardsData } from '../pages/home/HomeData';
-import { NavLink } from 'react-router-dom';
-// import img1 from '../assets/page-img/esfj-table.png';
-// import img2 from '../assets/page-img/intj-leaves.png';
-// import img3 from '../assets/page-img/infp-pour-cropped.png';
-// import Button from './Button';
 import SingleCard from './SingleCard';
 
-const ImgCards = ({cardsData}) => {
+const ImgCards = ({ cardsData }) => {
     return (
         <>
-        {/* <div className='diamond-clip-wrapper'> 
-            <div className="diamond-clip-left"></div>
-        </div> */}
         <div className='container-fluid'>
             <div className="row mx-1 mx-lg-1 mx-xl-2 d-flex justify-content-center">
                 <div className='col-12 col-sm-11'>
@@ -26,12 +17,6 @@ const ImgCards = ({cardsData}) => {
                     </div>
                 </div>
             </div>
-        {/* <div className='diamond-clip-wrapper'> 
-            <div className="diamond-clip-right"></div>
-        </div> */}
-        {/* <div className='diamond-clip-wrapper'> 
-            <div className="diamond-clip-right"></div>
-        </div> */}
         </>
     );
 }

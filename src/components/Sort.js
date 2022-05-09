@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
-// import { AiFillRightSquare } from 'react-icons/ai';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { BsArrowDownCircleFill, BsFillArrowUpCircleFill } from 'react-icons/bs';
 import { FcAlphabeticalSortingAz, FcAlphabeticalSortingZa } from 'react-icons/fc';
-import { FaTrash } from 'react-icons/fa';
-import { ImCross } from 'react-icons/im';
-import { GiSplitCross } from 'react-icons/gi';
 import { HiOutlineX } from 'react-icons/hi';
-import { AiOutlineClose } from 'react-icons/ai';
 import { useSelector, useDispatch } from 'react-redux';
 import { filterProducts, renderFilter, sortProducts, removeSingleFilter, removeAllFilters } from '../redux/productsSlice';
 
@@ -28,9 +23,12 @@ const Sort = () => {
         dispatch(sortProducts(filterType));
     }
 
+    let sort = useSelector(state => state.products.sortApplied);
+
     const HandleFilterProducts = (filter) => {
         dispatch(filterProducts(filter));
         dispatch(renderFilter());
+        if(sort) dispatch(sortProducts(sort));
     };
 
     const HandleReset = () => {

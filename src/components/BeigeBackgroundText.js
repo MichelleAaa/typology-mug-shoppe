@@ -21,5 +21,4 @@ const Para = ({paragraph}) => {
     );
 }
 
-
 export default BeigeBackgroundText;

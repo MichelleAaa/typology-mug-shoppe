@@ -13,7 +13,7 @@ const SingleCard = ({cardInfo }) => {
                         { cardInfo.icon ? <Icon cardInfo={cardInfo} /> : <Image cardInfo={cardInfo} /> }
                         
                         <CardTitle tag="h5">
-                            <h2>{cardInfo.title}</h2>
+                            <p className='card-title'>{cardInfo.title}</p>
                         </CardTitle>
                         <CardSubtitle
                             className="mb-2 text-muted"
@@ -50,7 +50,7 @@ const Image = ({cardInfo}) => {
     return (
         <Link to="/products/" onClick={() => HandleLinkClick(cardInfo.title)}>
             <div className='card-img-wrapper'>
-            <CardImg top src={cardInfo.img} alt={cardInfo.alt} className="card-img mb-2" />
+            <CardImg top src={cardInfo.img} alt={`${cardInfo.title} Mug`} className="card-img mb-2" />
             </div>
         </Link>
     );

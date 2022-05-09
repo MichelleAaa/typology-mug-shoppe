@@ -35,11 +35,13 @@ function AboutPage() {
         <>
             <AboutHeader />
             <div className="py-5"></div>
-            <AboutTextDetail />
-            <div className="pt-5"></div>
-            <RefundDetail />
-            <div className="pt-5"></div>
-            <AboutImgGrid />
+            <main>
+                <AboutTextDetail />
+                <div className="pt-5"></div>
+                <RefundDetail />
+                <div className="pt-5"></div>
+                <AboutImgGrid />
+            </main>
             <SubscriptionSmall />
         </>
     );

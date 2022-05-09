@@ -8,7 +8,6 @@ import { Tooltip } from 'reactstrap';
 import { FaTrash } from 'react-icons/fa';
 import { IoIosArrowUp, IoIosArrowDown } from 'react-icons/io';
 
-
 const CartPage = () => {
     let dispatch = useDispatch();
     const cartData = useSelector(state => state.cart.cartItems);
@@ -24,16 +23,16 @@ const CartPage = () => {
 
     if (cartData.length < 1) {
         return (
-            <div className='container-fluid mt-5 pt-5 cart-wrapper'>
-                <div className="row">
-                    <div className="col-6">
-                        <h2>Your cart is empty</h2>
-                        <Link to='/products' className='btn'>
+            <main className='container-fluid mt-5 pt-5 cart-wrapper'>
+                <div className="row pt-5">
+                    <div className="col-12 text-center">
+                        <h2 className='pb-4'>Your cart is empty</h2>
+                        <Link to='/products' className='btn btn-main outline-btn text-dark'>
                             View Products
                         </Link>
                 </div>
             </div>
-        </div>
+        </main>
         );
     }
     return (

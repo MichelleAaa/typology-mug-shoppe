@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import { BrowserRouter, Routes, Route, useLocation, Outlet } from 'react-router-dom';
 import ScrollToTop from "./utils/ScrollToTop";
 import Navigation from './components/Navbar';
@@ -11,9 +10,7 @@ import Footer from './components/Footer';
 import SingleProduct from './components/SingleProduct';
 import CartError from './components/CartError';
 import CartPage from './pages/cart/cart';
-// import ProductsGrid from './components/SingleProduct';
 import { motion } from "framer-motion";
-
 import './App.css';
 
 const PageLayout = ({ children }) => children;
@@ -34,8 +31,7 @@ const pageTransition = {
   type: "spring",
   ease: "linear",
   damping: 10,
-  stiffness: 50,
-  // duration: 1
+  stiffness: 50
 };
 
 const AnimationLayout = () => {
@@ -55,28 +51,7 @@ const AnimationLayout = () => {
   );
 };
 
-// export const AnimatedRoutes = () => {
-//   const location = useLocation();
-
-//   return (
-//     <AnimatePresence exitBeforeEnter>
-//       <Routes location={location} key={location.pathname}>
-//         <Route element={<Wrapper />}>
-//           <Route path='/' element={<HomePage />}/>
-//           <Route index element={<HomePage />} />
-//           <Route path='products' element={<ProductsPage />} />
-//           <Route index element={<ProductsPage />} /> 
-//           <Route exact path='products/:productId' element={<SingleProduct />} />
-//           <Route path='about' element={<AboutPage />}/>
-//           <Route path='contact' element={<ContactPage />}/>
-//         </Route>
-//       </Routes>
-//     </AnimatePresence>
-//   );
-// };
-
 function App() {
-  // const location = useLocation();
   return (
     <BrowserRouter>
       <Navigation />
