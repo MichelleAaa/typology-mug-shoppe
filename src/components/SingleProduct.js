@@ -25,62 +25,64 @@ const SingleProduct = () => {
 
     return (
         <React.Fragment>
-            <main className='container-fluid py-5 mt-4'>
-                <div className='row'>
-                    <div className='col-12 d-flex justify-content-start pt-2'>
-                        <button className="btn btn-main outline-btn">
-                            <Link to='/products/' className='outline-link'>
-                            Back to Products
-                            </Link>
-                        </button>
-                    </div>
-                </div>
-                <div className='row mt-5 d-flex justify-content-center px-2 px-md-5 px-lg-1'>
-                    <div className='col-12 col-lg-6 col-xl-5'>
-                        <ProductImgGrid images={product.img} />
-                    </div>
-                    <div className='col-12 col-lg-6 col-xl-5 mt-5 mt-lg-0'>
-                        <h1 className='product-header'>{product.name}</h1>
-                        <p>{product.description}</p>
-                        <p><strong>Availability:</strong> {product.stock} in stock</p>
-                        <p><strong>Price:</strong> {FormatPrice(product.price)}</p>
-                        <hr />
-                        { product.stock > 0 ? 
-                        <React.Fragment>
-                            <button type='button' className={"mt-4 btn btn-main outline-btn"} 
-                            onClick={() => {HandleAddToCart(product);
-                            toggle();}}> 
-                            Add to Cart
+            <main>
+                <section className='container-fluid py-5 mt-4'>
+                    <div className='row'>
+                        <div className='col-12 d-flex justify-content-start pt-2'>
+                            <button className="btn btn-main outline-btn">
+                                <Link to='/products/' className='outline-link'>
+                                Back to Products
+                                </Link>
                             </button>
-                            <Modal isOpen={modal} toggle={toggle} className=''>
-                                <ModalHeader toggle={toggle}> 
-                                <div className='d-flex flex-row justify-content-center align-items-center'>
-                                    <BsCheck2All color='green' margin='auto' /> 
-                                    <p className='my-auto'>Added to Cart:</p>
-                                </div>
-                                </ModalHeader>
-                                <ModalBody>
-                                    <div className='d-flex flex-row justify-content-center align-items-center'>
-                                        <img src={product.img[0].img} alt='Cup' className='product-modal-img' />
-                                        <p className='pl-3 product-modal-text'>{product.name}</p>
-                                </div>
-                                </ModalBody>
-                                <ModalFooter>
-                                <button className="btn btn-main outline-btn">
-                                    <Link to='/cart/' className='outline-link'>
-                                    Go to Cart
-                                    </Link>
-                                </button> 
-                                <Button color="btn btn-main outline-btn" onClick={toggle}>Continue Shopping</Button>
-                                </ModalFooter>
-                            </Modal>
-                        </React.Fragment>
-                        : 
-                        <button type='button' className="mt-4 btn btn-main"> Subscribe to our Newsletter to be Notified when this Product is Available</button>}
+                        </div>
                     </div>
-                </div>
+                    <div className='row mt-5 d-flex justify-content-center px-2 px-md-5 px-lg-1'>
+                        <div className='col-12 col-lg-6 col-xl-5'>
+                            <ProductImgGrid images={product.img} />
+                        </div>
+                        <div className='col-12 col-lg-6 col-xl-5 mt-5 mt-lg-0'>
+                            <h1 className='product-header'>{product.name}</h1>
+                            <p>{product.description}</p>
+                            <p><strong>Availability:</strong> {product.stock} in stock</p>
+                            <p><strong>Price:</strong> {FormatPrice(product.price)}</p>
+                            <hr />
+                            { product.stock > 0 ? 
+                            <React.Fragment>
+                                <button type='button' className={"mt-4 btn btn-main outline-btn"} 
+                                onClick={() => {HandleAddToCart(product);
+                                toggle();}}> 
+                                Add to Cart
+                                </button>
+                                <Modal isOpen={modal} toggle={toggle} className=''>
+                                    <ModalHeader toggle={toggle}> 
+                                    <div className='d-flex flex-row justify-content-center align-items-center'>
+                                        <BsCheck2All color='green' margin='auto' /> 
+                                        <p className='my-auto'>Added to Cart:</p>
+                                    </div>
+                                    </ModalHeader>
+                                    <ModalBody>
+                                        <div className='d-flex flex-row justify-content-center align-items-center'>
+                                            <img src={product.img[0].img} alt='Cup' className='product-modal-img' />
+                                            <p className='pl-3 product-modal-text'>{product.name}</p>
+                                    </div>
+                                    </ModalBody>
+                                    <ModalFooter>
+                                    <button className="btn btn-main outline-btn">
+                                        <Link to='/cart/' className='outline-link'>
+                                        Go to Cart
+                                        </Link>
+                                    </button> 
+                                    <Button color="btn btn-main outline-btn" onClick={toggle}>Continue Shopping</Button>
+                                    </ModalFooter>
+                                </Modal>
+                            </React.Fragment>
+                            : 
+                            <button type='button' className="mt-4 btn btn-main"> Subscribe to our Newsletter to be Notified when this Product is Available</button>}
+                        </div>
+                    </div>
+                </section>
+                <ProductDetail product={product} />
             </main>
-            <ProductDetail product={product} />
             <SubscriptionSmall />
         </React.Fragment>
     );
@@ -106,7 +108,7 @@ const ProductImgGrid = ({ images }) => {
 
 const ProductDetail = ( {product} ) => {
     return (
-        <div className='container py-4 my-4'>
+        <section className='container py-4 my-4'>
             <div className='row mt-1 mx-1 mx-lg-5 py-5 d-flex justify-content-around px-2 px-md-5 px-lg-1 product-detail'>
                 <div className='col-12 col-lg-6 col-xl-5 pb-4 pb-lg-0 d-flex flex-column justify-content-center'>
                         <h2 className='pb-4 pb-xl-5 text-center jumbotron-subheader'>Type Letter Meaning</h2>
@@ -116,7 +118,7 @@ const ProductDetail = ( {product} ) => {
                         <img src={product.img[0].img} alt='Cup' className='product-second-img' />
                 </div>
             </div>    
-        </div>
+        </section>
     );
 }
 
@@ -130,10 +132,26 @@ const TypeDetail = ( {product}) => {
 
     return(
         <React.Fragment>
-            <p><span className="font-weight-bold">{letter1.name}</span>: {letter1.description}</p>
-            <p><span className="font-weight-bold">{letter2.name}</span>: {letter2.description}</p>
-            <p><span className="font-weight-bold">{letter3.name}</span>: {letter3.description}</p>
-            <p><span className="font-weight-bold">{letter4.name}</span>: {letter4.description}</p>
+            <article>
+                <p>
+                    <span className="font-weight-bold">{letter1.name}</span>: {letter1.description}
+                </p>
+            </article>
+            <article>
+                <p>
+                    <span className="font-weight-bold">{letter2.name}</span>: {letter2.description}
+                </p>
+            </article>
+            <article>
+                <p>
+                    <span className="font-weight-bold">{letter3.name}</span>: {letter3.description}
+                </p>
+            </article>
+            <article>
+                <p>
+                    <span className="font-weight-bold">{letter4.name}</span>: {letter4.description}
+                </p>
+            </article>
         </React.Fragment>
     );
 }

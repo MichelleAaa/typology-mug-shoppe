@@ -22,7 +22,7 @@ const SubscriptionLarge = () => {
     };
 
     return (
-        <div className="container-fluid py-5 subscription-home">
+        <section className="container-fluid py-5 subscription-home">
             <div className='row d-flex align-items-center'>
                 <div className="col-12 col-md-6 text-center text-md-right">
                     <h4>Sign Up to Our Newsletter for Exclusive Offers!</h4>
@@ -52,7 +52,7 @@ const SubscriptionLarge = () => {
                         </Modal>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

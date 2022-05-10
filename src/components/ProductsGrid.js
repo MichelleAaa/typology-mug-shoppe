@@ -9,20 +9,21 @@ const ProductsGrid = () => {
 const productsData = useSelector(state => state.products.filteredProducts);
 
     return (
-        <Fade in>
-            <div className='container-fluid'>
-                <div className="row d-flex justify-content-center align-items-center mx-1 mx-md-3 mx-lg-5 px-md-5">
-                    { productsData.map(product =><Product key={product.id} product={product}/> ) }
+        <section>
+            <Fade in>
+                <div className='container-fluid'>
+                    <div className="row d-flex justify-content-center align-items-center mx-1 mx-md-3 mx-lg-5 px-md-5">
+                        { productsData.map(product =><Product key={product.id} product={product}/> ) }
+                    </div>
                 </div>
-            </div>
-        </Fade>
+            </Fade>
+        </section>
     );
 }
 
 const Product = ({product}) => {
     return (
-        <>
-        
+        <article>
             <div className='col-6 col-sm-6 col-md-4 col-xl-3 p-0'>
                 <div className="d-flex flex-column justify-content-center">
                     <div className='wrapper-product-img'>
@@ -36,8 +37,7 @@ const Product = ({product}) => {
                     </div>
                 </div>
             </div>
-            
-        </>
+        </article>
     );
 }
 

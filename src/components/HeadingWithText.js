@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeadingWithText = ({ textData }) => {
     return (
-        <div className="container-fluid">
+        <section className="container-fluid">
             <div className="row d-flex justify-content-center">
                 <div className="col-11 col-sm-9 text-center home-about mt-2 pt-2 mb-0 pb-0">
                     <h2 className="display-4 para-heading">{textData.title}</h2>
@@ -11,7 +11,7 @@ const HeadingWithText = ({ textData }) => {
                     }
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

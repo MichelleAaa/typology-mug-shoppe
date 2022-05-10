@@ -1,17 +1,16 @@
-
 import React from 'react';
 
 const ImgGridWithText = ({ textData }) => {
     return (
         <>
-            <div className="container-fluid mb-5">
+            <section className="container-fluid mb-5">
                 <div className="row pt-1 pt-md-5 d-flex justify-content-center align-items-center">
-                    <div className="col-11 col-xl-6 mt-5 text-center">
+                    <article className="col-11 col-xl-6 mt-5 text-center">
                         <h2 className="jumbotron-subheader">{textData.title}</h2>
                         <h3 className="px-lg-3 mb-3">{textData.subtitle}</h3>
                         <p className="mx-lg-5 mt-2 ">{textData.text1}</p>
                         <p className="mx-lg-5 mt-2 ">{textData.text2}</p>
-                    </div>
+                    </article>
                     <div className="col-11 col-xl-6">
                         <div className="row">
                             <div className="col-6">
@@ -28,7 +27,7 @@ const ImgGridWithText = ({ textData }) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     );
 }

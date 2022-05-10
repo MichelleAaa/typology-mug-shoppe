@@ -8,7 +8,7 @@ const HeaderSmall = ({ headerData }) => {
             <div className='diamond-clip-wrapper'> 
                 <div className="diamond-clip-left"></div>
             </div>
-            <div className="mt-5">
+            <header className="mt-5">
                 <div className="container-fluid pt-4 header-small">
                     <div className="row d-flex justify-content-around align-items-center">
                         <div className="col-12 col-sm-10 col-md-10 col-lg-4 col-xl-4 text-center d-flex justify-content-between">
@@ -24,7 +24,7 @@ const HeaderSmall = ({ headerData }) => {
                             </div>
                     </div>
                 </div>
-            </div>
+            </header>
         </>
     );
 }

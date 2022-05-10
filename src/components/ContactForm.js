@@ -15,7 +15,7 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="container-fluid ">
+        <section className="container-fluid ">
             <div className="row d-flex justify-content-center">
                 <div className="col-11 col-lg-6 text-center home-about mt-4 py-5">
                     <h2 className="contact-title pb-5">Send Us Your Questions and Feedback</h2>
@@ -74,7 +74,7 @@ const ContactForm = () => {
                     </form>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

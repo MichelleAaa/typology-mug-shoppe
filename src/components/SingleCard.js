@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const SingleCard = ({cardInfo }) => {
     return (
-        <div className="col-12 col-md-6 col-xl-3 mb-3">
+        <article className="col-12 col-md-6 col-xl-3 mb-3">
                 <Card>
                     <CardBody className="text-center">
                         { cardInfo.icon ? <Icon cardInfo={cardInfo} /> : <Image cardInfo={cardInfo} /> }
@@ -26,7 +26,7 @@ const SingleCard = ({cardInfo }) => {
                         </CardText>
                     </CardBody>
                 </Card>
-        </div>
+        </article>
     );
 }
 

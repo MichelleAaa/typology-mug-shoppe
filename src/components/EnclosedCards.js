@@ -6,7 +6,7 @@ import SingleCard from './SingleCard';
 const EnclosedCards = () => {
     return (
         <>
-        <div className='container-fluid'>
+        <section className='container-fluid'>
             <div className="row mx-1 mx-lg-1 mx-xl-2 d-flex justify-content-center">
                 <div className='col-12 col-sm-11 cards-container'>
                     <div className='row d-flex justify-content-center'>
@@ -25,7 +25,7 @@ const EnclosedCards = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         </>
     );
 }

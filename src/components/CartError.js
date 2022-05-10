@@ -2,7 +2,7 @@ import { MdErrorOutline } from 'react-icons/md';
 
 const CartError = () => {
     return (
-        <div className='container-fluid pt-5'>
+        <main className='container-fluid pt-5'>
             <div className='row'>
                 <div className='col-12 d-flex justify-content-center align-items-center cart-error'>
                     <div className='d-flex flex-column justify-content-center align-items-center'>
@@ -11,7 +11,7 @@ const CartError = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }
 

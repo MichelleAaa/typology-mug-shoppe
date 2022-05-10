@@ -17,48 +17,46 @@ const Navigation = () => {
     }
 
     return (
-        <div>
-            <Navbar
-                color="light"
-                expand="lg"
-                fixed="top"
-                light
-            >
-                <NavbarBrand className="mr-auto" href="/">
-                    <img src={Logo} height="30"  alt="Typology Logo" />
-                </NavbarBrand>
-                <NavbarToggler onClick={toggle}  />
-                <Collapse isOpen={isOpen} navbar>
-                <Nav navbar className="ml-auto text-nowrap">
+        <Navbar
+            color="light"
+            expand="lg"
+            fixed="top"
+            light
+        >
+            <NavbarBrand className="mr-auto" href="/">
+                <img src={Logo} height="30"  alt="Typology Logo" />
+            </NavbarBrand>
+            <NavbarToggler onClick={toggle}  />
+            <Collapse isOpen={isOpen} navbar>
+            <Nav navbar className="ml-auto text-nowrap">
+                <NavItem>
+                    <NavLink to="/">
+                        Home
+                    </NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink to="/products/" onClick={() => HandleProductsClick()}>
+                        Mugs
+                    </NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink to="/about/">
+                        About
+                    </NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink to="/contact/">
+                        Contact
+                    </NavLink>
+                </NavItem>
                     <NavItem>
-                        <NavLink to="/">
-                            Home
+                        <NavLink to="/cart/">
+                            <FaShoppingCart /> Cart
                         </NavLink>
                     </NavItem>
-                    <NavItem>
-                        <NavLink to="/products/" onClick={() => HandleProductsClick()}>
-                            Mugs
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink to="/about/">
-                            About
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink to="/contact/">
-                            Contact
-                        </NavLink>
-                    </NavItem>
-                        <NavItem>
-                            <NavLink to="/cart/">
-                                <FaShoppingCart /> Cart
-                            </NavLink>
-                        </NavItem>
-                </Nav>
-                </Collapse>
-            </Navbar>
-        </div>
+            </Nav>
+            </Collapse>
+        </Navbar>
     );
 }
 
