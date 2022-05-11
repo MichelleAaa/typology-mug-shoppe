@@ -9,6 +9,7 @@ import ProductsPage from './pages/products/Products';
 import Footer from './components/Footer';
 import SingleProduct from './components/SingleProduct';
 import CartError from './components/CartError';
+import Error from './components/Error';
 import CartPage from './pages/cart/cart';
 import { motion } from "framer-motion";
 import './App.css';
@@ -66,6 +67,7 @@ function App() {
           <Route path='contact' element={<ContactPage />}/>
           <Route path='cart' element={<CartPage />}/>
           <Route path='carterror' element={<CartError />}/>
+          <Route path='*' element={<Error />} />
         </Route>
       </Routes>
       <ScrollToTop>

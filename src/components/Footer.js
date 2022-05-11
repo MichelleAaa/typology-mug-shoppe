@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="container-fluid">
                 <div className="row px-0 pt-4 d-flex justify-content-start mx-0">
                     <div className="col-10 col-md-2">
-                        <ul className="list-unstyled footer-item">
+                        <ul className="list-unstyled footer-item text-nowrap">
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/products" onClick={() => HandleProductsClick()}>Mugs</Link></li>
                             <li><Link to="/about">About</Link></li>
@@ -28,7 +28,7 @@ const Footer = () => {
                         <div className="text-left footer-item">
                             <a role="button" className="contact-links" href="tel:+12345678901"><ImPhone color='black' /> {" "}
                                 1-234-567-8901</a><br />
-                            <a role="button" className="contact-links" href="mailto:office@labustours.com"><HiMailOpen color='black' />
+                            <a role="button" className="contact-links" href="mailto:admin@tmugs.com"><HiMailOpen color='black' />
                                 {" "}admin@tmugs.com</a><br />
                         </div>
                     </div>

@@ -137,7 +137,25 @@ h2, h3, h4, h5 {
   position: absolute;
 }
 
-.diamond-clip-right {
+@media only screen and (min-width: 320px) {
+  .diamond-clip-left {
+      width: 250px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+  .diamond-clip-left {
+      width: 270px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+  .diamond-clip-left {
+      width: 280px;
+    }
+}
+
+/* .diamond-clip-right {
   background-color: #e9e5df;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   height: 300px;
@@ -146,7 +164,7 @@ h2, h3, h4, h5 {
   top: -1px;
   right: -200px;
   position: absolute;
-}
+} */
 
 .header-img {
   object-fit: cover;
@@ -213,7 +231,6 @@ h2, h3, h4, h5 {
 
 .jumbotron-subheader {
   font-size: 3rem;
-  font-family: 'Expletus Sans', cursive;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -490,12 +507,12 @@ hr {
 
 .footer-item li a {
   color: black;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .contact-links, .contact-links:hover {
   color: black;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   text-decoration: none;
 }
 
@@ -581,14 +598,31 @@ hr {
   }
 }
 
-
 .products-grid-img {
   display: block;
   object-fit: cover;
   width: 100%;
-  max-height: 300px;
+  height: 300px;
   transition: .3s ease-in;
   filter: brightness(1.02);
+}
+
+@media only screen and (min-width: 320px) {
+  .products-grid-img {
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .products-grid-img {
+      height: 270px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .products-grid-img {
+    height: 300px;
+  }
 }
 
 .text-wrapper-1 {
@@ -757,7 +791,7 @@ hr {
   font-family: 'Montserrat', sans-serif;
 }
 
-.faq-category header {
+.faq-category div {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -766,7 +800,7 @@ hr {
   padding-bottom: 10px;
 }
 
-.question header {
+.question div {
   margin-left: 30px;
 }
 
@@ -778,7 +812,7 @@ hr {
   font-size: 1.2rem;
 }
 
-.faq-category header button, .question header button {
+.faq-category div button, .question div button {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.2;
   background-color: transparent;
@@ -787,17 +821,17 @@ hr {
   border-radius: 0;
 }
 
-.faq-category header button:focus,
-.question header button:focus {
+.faq-category div button:focus,
+.question div button:focus {
   border-bottom: 1px solid #d4d0cb;
 }
 
-.faq-category header button {
+.faq-category div button {
   color: #5f596a;
   font-size: 2rem;
 }
 
-.question header button {
+.question div button {
   color: gray;
   font-size: 1.3rem;
   text-align: left;
@@ -823,11 +857,41 @@ hr {
   font-size: .9rem;
 }
 
+.amount-btn:focus, .amount-btn:active {
+  border: none;
+}
+
 .cart-amount {
   font-family: 'Source Serif Pro', serif;
   font-size: 1.23rem;
 }
-.cart-error {
+
+.error {
   min-height: 75vh;
 }
 
+.error-text {
+  color: #5f596a;
+  font-size: 2rem;
+}
+
+@media only screen and (min-width: 320px) {
+  .cart-total {
+      font-family: 'Montserrat', sans-serif;
+      color: #5f596a;
+      font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+  .cart-total {
+      font-family: 'Montserrat', sans-serif;
+      color: #5f596a;
+      font-size: 1.65rem;
+    }
+}
+
+.test {
+    height: 100px;
+  line-height: 100px;
+}

@@ -140,8 +140,9 @@ const ActiveFilters = (filterType) => {
     console.log(filterType);
     return (
         <section className='d-flex flex-row justify-content-center'>
-            <p className='my-auto'> 
-            {filterType.filterType}</p>
+            <p className='my-auto mr-1'> 
+                {filterType.filterType}
+            </p>
             <button type='button' className='amount-btn' onClick={() => HandleRemoveFilter(filterType.filterType)}><HiOutlineX size='20px' color='gray' /></button>
         </section>
     );

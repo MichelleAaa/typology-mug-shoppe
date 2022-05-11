@@ -48,7 +48,7 @@ const SingleProduct = () => {
                             <hr />
                             { product.stock > 0 ? 
                             <React.Fragment>
-                                <button type='button' className={"mt-4 btn btn-main outline-btn"} 
+                                <button type='button' className={"mt-4 btn btn-main outline-btn outline-link"} 
                                 onClick={() => {HandleAddToCart(product);
                                 toggle();}}> 
                                 Add to Cart
@@ -72,7 +72,7 @@ const SingleProduct = () => {
                                         Go to Cart
                                         </Link>
                                     </button> 
-                                    <Button color="btn btn-main outline-btn" onClick={toggle}>Continue Shopping</Button>
+                                    <Button color="btn btn-main outline-btn outline-link" onClick={toggle}>Continue Shopping</Button>
                                     </ModalFooter>
                                 </Modal>
                             </React.Fragment>

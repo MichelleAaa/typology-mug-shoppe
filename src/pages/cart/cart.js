@@ -14,7 +14,7 @@ const CartPage = () => {
 
     useEffect(() => {
     dispatch(calculateTotals());
-    }, [cartData]);
+    }, [cartData, dispatch]);
 
     const subTotal = useSelector (state => state.cart.total_price);
 
@@ -26,8 +26,8 @@ const CartPage = () => {
             <main className='container-fluid mt-5 pt-5 cart-wrapper'>
                 <div className="row pt-5">
                     <div className="col-12 text-center">
-                        <h2 className='pb-4'>Your cart is empty</h2>
-                        <Link to='/products' className='btn btn-main outline-btn text-dark'>
+                        <h1 className='pb-4 para-heading'>Your cart is empty</h1>
+                        <Link to='/products' className='btn btn-main outline-btn outline-link'>
                             View Products
                         </Link>
                 </div>
@@ -52,11 +52,11 @@ const CartPage = () => {
                 <div className='col-7 col-xl-6 text-right'>
                     <div className='row d-flex justify-content-end pb-5'>
                         <div className='col-md-8 col-xl-5'>
-                            <h3 className='text-left'>SUMMARY</h3>
+                            <p className='text-left cart-total mb-0'>SUMMARY</p>
                             <hr/>
                             <p>Subtotal: <span>{FormatPrice(subTotal)}</span></p>
                             <p>Shipping: <span>$5.98</span></p>
-                            <h3 className='text-left text-nowrap'>ORDER TOTAL</h3>
+                            <p className='text-left text-nowrap cart-total mb-0'>ORDER TOTAL</p>
                             <hr/>
                             <span>{FormatPrice(subTotal + 598)}</span>
                         </div>
@@ -64,7 +64,7 @@ const CartPage = () => {
                     <div className='row d-flex justify-content-end pb-5'>
                         <div className='col-md-8 col-xl-5'>
                             <span style={{textDecoration: "underline", color:"blue"}} href="#" id="TooltipExample">
-                                <Button buttonData={{id: 0, text: 'Proceed to Checkout', btnClass: 'outline-btn', linkClass: 'outline-link', link: '/carterror'}}/>
+                                <Button buttonData={{id: 0, text: 'Proceed to Checkout', btnClass: 'outline-btn text-nowrap', linkClass: 'outline-link', link: '/carterror'}}/>
                             </span>
                             <Tooltip placement="bottom" isOpen={tooltipOpen} target="TooltipExample" toggle={toggle}>Apologies, but we are unable to accept orders at this time.
                             </Tooltip>
@@ -110,13 +110,13 @@ const CartItem = ({ itemData }) => {
                     <div className='row'>
                         <div className='col-6'>
                             <div className='d-flex flex-row justify-content-start'>
-                                    <h2 className='cart-amount my-auto'>Quantity: {itemData.quantity}</h2>
+                                    <p className='cart-amount my-auto pr-1'>Quantity: {itemData.quantity}</p>
                                 
                                 <div className='d-flex flex-column justify-content-center'>
                                 <button type='button' className='amount-btn' 
                                 onClick={() => HandleIncreaseItem(itemData)}
                                 >
-                                    <IoIosArrowUp size='25px'/>
+                                    <IoIosArrowUp size='25px' />
                                 </button>
                                 <button type='button' className='amount-btn' 
                                 onClick={() => HandleDecreaseItem(itemData)}

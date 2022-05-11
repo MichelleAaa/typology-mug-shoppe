@@ -30,8 +30,13 @@ const QuestionSection = ({ sectionData }) => {
     return (
         <section className='faq-category'>
         <div>
-            <button type='button' className='btn faq-category-title' onClick={() => setShowInfo(!showInfo)}><span>{sectionData.title + ' '}</span> 
-            {showInfo ? <AiOutlineMinus /> : <AiOutlinePlus />}
+            <button type='button' className='btn faq-category-title' onClick={() => setShowInfo(!showInfo)}>
+                {sectionData.title + ' '} 
+            {showInfo ? 
+                <AiOutlineMinus size='25px' /> 
+                : 
+                <AiOutlinePlus size='25px' /> 
+                } 
             </button>
         </div>
         {showInfo && <p>{sectionData.questions.map(question => <SectionQuestions questionData={question}/>)}</p>}
