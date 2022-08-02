@@ -64,15 +64,15 @@ The individual product page features multiple photos of the cups, information, a
 
 Add to Cart Modal
 
-![Add to Cart Modal](src/assets-for-readme/typology-single-product-modal.jpeg "Clicking on "Add to Cart" on the individual product page will launch a modal. This is just one of the modals in the project.")
+![Add to Cart Modal](src/assets-for-readme/typology-single-product-modal.jpeg "Clicking on 'Add to Cart' on the individual product page will launch a modal. This is just one of the modals in the project.")
 
-Clicking on "Add to Cart" on the individual product page will launch a modal. This is just one of the modals in the project.
+Clicking on 'Add to Cart' on the individual product page will launch a modal. This is just one of the modals in the project.
 
 
 
 Cart Page
 
-![Cart Page](src/assets-for-readme/typology-cart-1.jpeg "The cart page allows the user to change the quantity of, or remove, items previously added to the cart.")
+![Cart Page](src/assets-for-readme/typology-cart-1.png "The cart page allows the user to change the quantity of, or remove, items previously added to the cart.")
 
 The cart page allows the user to change the quantity of, or remove, items previously added to the cart..
 
@@ -83,15 +83,15 @@ The cart page allows the user to change the quantity of, or remove, items previo
 
 ## Installation and Setup Instructions
 
-Clone this repository. You will need `npm` installed on your machine.  
+Clone this repository. You will need `yarn` installed on your machine.  
 
 Installation:
 
-`npm install`   
+`yarn install`   
 
 To Start Server:
 
-`npm start`  
+`yarn start`  
 
 To Visit App (assuming you have no other application running on port 3000):
 
