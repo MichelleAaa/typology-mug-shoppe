@@ -49,8 +49,11 @@ const SingleProduct = () => {
                             { product.stock > 0 ? 
                             <React.Fragment>
                                 <button type='button' className={"mt-4 btn btn-main outline-btn outline-link"} 
-                                onClick={() => {HandleAddToCart(product);
-                                toggle();}}> 
+                                onClick={
+                                    () => { HandleAddToCart(product);
+                                toggle();
+                            }
+                                }> 
                                 Add to Cart
                                 </button>
                                 <Modal isOpen={modal} toggle={toggle} className=''>

@@ -104,7 +104,7 @@ const CartItem = ({ itemData }) => {
                             <p className='cart-amount'>{FormatPrice(itemData.price)}</p>
                         </div>
                         <div className='col-6 d-flex justify-content-end'>
-                            <p className=''>{FormatPrice(itemData.price)}</p>
+                            <p className=''>{FormatPrice(itemData.price * itemData.quantity)}</p>
                         </div>
                     </div>
                     <div className='row'>

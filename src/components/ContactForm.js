@@ -10,8 +10,8 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Current state is: ' + JSON.stringify(input));
-        alert('You entered: ' + JSON.stringify(input));
+        console.log('Information Submitted: ' + JSON.stringify(input));
+        alert('Thank you, your message has been sent. You will be receiving a reply from one of our representatives within 2-3 business days.');
     };
 
     return (

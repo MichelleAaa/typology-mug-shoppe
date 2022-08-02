@@ -49,11 +49,11 @@ const Navigation = () => {
                         Contact
                     </NavLink>
                 </NavItem>
-                    <NavItem>
-                        <NavLink to="/cart/">
-                            <FaShoppingCart /> Cart
-                        </NavLink>
-                    </NavItem>
+                <NavItem>
+                    <NavLink to="/cart/">
+                        <FaShoppingCart /> Cart
+                    </NavLink>
+                </NavItem>
             </Nav>
             </Collapse>
         </Navbar>
