@@ -74,7 +74,7 @@ Cart Page
 
 ![Cart Page](src/assets-for-readme/typology-cart-1.png "The cart page allows the user to change the quantity of, or remove, items previously added to the cart.")
 
-The cart page allows the user to change the quantity of, or remove, items previously added to the cart..
+The cart page allows the user to change the quantity of, or remove, items previously added to the cart.
 
 
 
@@ -106,6 +106,12 @@ After the creation of the L.A. Bus Tours website, I decided to make something mo
 I ran into several challenges while implementing this project. One of the challenges was setting up Redux for the products sorting/filtering and the cart functionality. It was a unique challenge as it involved moving the brains of the operation, in comparison to the structure of simple JavaScript web applications, which I had already been accustomed to creating. Another issue I ran into that took some time to resolve involved incompatibilities of the transition package I was attempting to use with React Router Dom 6. After over a day of research I was able to settle on a working alternative, as the transition effect was not a component I wanted to leave out.
 
 The technologies implemented in this project include React, React Router Dom 6, Redux with Toolkit, Bootstrap, Reactstrap, Framer Motion,  VanillaJS, JSX, CSS and more.
+
+## References:
+
+-John Smilga - React Tutorial and Projects Course- https://www.udemy.com/course/react-tutorial-and-projects-course/  (ComfySloth Store Project - Inspiration for cart and filtering functionality, though my project uses Redux Toolkit instead of useContext.)
+-Digital Skills - https://dribbble.com/shots/18018185-Digital-Skills-Hero-Website  (Inspiration for the three image header design.)
+-Beauty Salon Landing Page - https://dribbble.com/shots/18014206-Beauty-Salon-Landing-Page  (Inspiration for the home page three image grid with side text.)
 
 # Note
 
