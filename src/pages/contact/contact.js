@@ -5,16 +5,10 @@ import ContactForm from '../../components/ContactForm';
 import SubscriptionSmall from '../../components/SubscriptionSmall';
 import ContactAccordion from '../../components/ContactAccordion';
 
-const ContactHeader = () => {
-    return (
-        <HeaderSmall headerData={ContactHeaderData} />
-    )
-}
-
 function ContactPage() {
     return (
-        <>
-            <ContactHeader />
+        <React.Fragment>
+            <HeaderSmall headerData={ContactHeaderData} />
             <div className="py-5"></div>
             <main>
                 <ContactForm />
@@ -23,7 +17,7 @@ function ContactPage() {
             </main>
             <div className="pt-5"></div>
             <SubscriptionSmall />
-        </>
+        </React.Fragment>
     );
 }
 

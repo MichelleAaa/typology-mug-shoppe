@@ -35,6 +35,7 @@ const CartPage = () => {
         </main>
         );
     }
+
     return (
         <main className='cart-wrapper'>
             <div className='container mt-5 pt-5'>
@@ -47,27 +48,27 @@ const CartPage = () => {
                     </div>
                 </div>
                 {cartData.map(item => <CartItem key={item.id} itemData={item}/>)}
-            </div>
-            <div className='row d-flex justify-content-center py-5'>
-                <div className='col-7 col-xl-6 text-right'>
-                    <div className='row d-flex justify-content-end pb-5'>
-                        <div className='col-md-8 col-xl-5'>
-                            <p className='text-left cart-total mb-0'>SUMMARY</p>
-                            <hr/>
-                            <p>Subtotal: <span>{FormatPrice(subTotal)}</span></p>
-                            <p>Shipping: <span>$5.98</span></p>
-                            <p className='text-left text-nowrap cart-total mb-0'>ORDER TOTAL</p>
-                            <hr/>
-                            <span>{FormatPrice(subTotal + 598)}</span>
+                <div className='row d-flex justify-content-center py-5'>
+                    <div className='col-7 col-xl-6 text-right'>
+                        <div className='row d-flex justify-content-end pb-5'>
+                            <div className='col-md-8 col-xl-5'>
+                                <p className='text-left cart-total mb-0'>SUMMARY</p>
+                                <hr/>
+                                <p>Subtotal: <span>{FormatPrice(subTotal)}</span></p>
+                                <p>Shipping: <span>$5.98</span></p>
+                                <p className='text-left text-nowrap cart-total mb-0'>ORDER TOTAL</p>
+                                <hr/>
+                                <span>{FormatPrice(subTotal + 598)}</span>
+                            </div>
                         </div>
-                    </div>
-                    <div className='row d-flex justify-content-end pb-5'>
-                        <div className='col-md-8 col-xl-5'>
-                            <span style={{textDecoration: "underline", color:"blue"}} href="#" id="TooltipExample">
-                                <Button buttonData={{id: 0, text: 'Proceed to Checkout', btnClass: 'outline-btn text-nowrap', linkClass: 'outline-link', link: '/carterror'}}/>
-                            </span>
-                            <Tooltip placement="bottom" isOpen={tooltipOpen} target="TooltipExample" toggle={toggle}>Apologies, but we are unable to accept orders at this time.
-                            </Tooltip>
+                        <div className='row d-flex justify-content-end pb-5'>
+                            <div className='col-md-8 col-xl-5'>
+                                <span style={{textDecoration: "underline", color:"blue"}} href="#" id="TooltipExample">
+                                    <Button buttonData={{id: 0, text: 'Proceed to Checkout', btnClass: 'outline-btn text-nowrap', linkClass: 'outline-link', link: '/carterror'}}/>
+                                </span>
+                                <Tooltip placement="bottom" isOpen={tooltipOpen} target="TooltipExample" toggle={toggle}>Apologies, but we are unable to accept orders at this time.
+                                </Tooltip>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -127,17 +128,17 @@ const CartItem = ({ itemData }) => {
                             </div>
                         </div>
                         <div className='col-6 d-flex justify-content-end align-items-center'>
-                                <button type='button' className='amount-btn' 
-                                onClick={() => HandleDeleteItem(itemData)}
-                                >
-                                    <FaTrash />
-                                </button>
+                            <button type='button' className='amount-btn' 
+                            onClick={() => HandleDeleteItem(itemData)}
+                            >
+                                <FaTrash />
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
             <div className='row py-4 d-flex justify-content-center'>
-                <div className='col-lg-10 '>
+                <div className='col-lg-10'>
                     <hr/>
                 </div>
             </div>

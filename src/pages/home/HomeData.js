@@ -59,10 +59,10 @@ export const HomeTextTypeData = {
 };
 
 export const ImgGridWithTextData = {
-    title: 'Mugs Display the Order of the Four Perspectives for Each Type',
+    title: 'Mugs Display the Order of the Four Perspectives',
     subtitle: 'Each Mug displays the perspectives in order of precidence, with the strongest preference at the top.',
     text1: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus incidunt tempore, maiores omnis sed nesciunt eaque exercitationem deleniti quas, itaque delectus velit autem. Dicta exercitationem optio tenetur iusto eos saepe.',
-    text2: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus incidunt tempore, maiores omnis sed nesciunt eaque exercitationem deleniti quas, itaque delectus velit autem. Dicta exercitationem optio tenetur iusto eos saepe.',
+    text2: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus incidunt tempore, maiores omnis sed nesciunt eaque exercitationem deleniti quas, itaque delectus velit autem.',
     img1: img5,
     img2: img4,
     img3: img6

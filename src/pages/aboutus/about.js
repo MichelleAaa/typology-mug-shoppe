@@ -6,44 +6,20 @@ import BeigeBackgroundText from '../../components/BeigeBackgroundText';
 import ImgGridWithText from '../../components/ImageGridWithText';
 import SubscriptionSmall from '../../components/SubscriptionSmall';
 
-const AboutHeader = () => {
-    return (
-        <HeaderSmall headerData={AboutHeaderData} />
-    )
-}
-
-const AboutTextDetail = () => {
-    return (
-        <HeadingWithText textData={AboutTextData} />
-    )
-}
-
-const RefundDetail = () => {
-    return (
-        <BeigeBackgroundText textData={GuaranteeData} />
-    )
-}
-
-const AboutImgGrid = () => {
-    return (
-        <ImgGridWithText textData={AboutImgGridData} />
-    )
-}
-
 function AboutPage() {
     return (
-        <>
-            <AboutHeader />
+        <React.Fragment>
+            <HeaderSmall headerData={AboutHeaderData} />
             <div className="py-5"></div>
             <main>
-                <AboutTextDetail />
+                <HeadingWithText textData={AboutTextData} />
                 <div className="pt-5"></div>
-                <RefundDetail />
+                <BeigeBackgroundText textData={GuaranteeData} />
                 <div className="pt-5"></div>
-                <AboutImgGrid />
+                <ImgGridWithText textData={AboutImgGridData} />
             </main>
             <SubscriptionSmall />
-        </>
+        </React.Fragment>
     );
 }
 

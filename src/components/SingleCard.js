@@ -6,12 +6,20 @@ import { filterProducts, removeAllFilters, renderFilter } from '../redux/product
 import { Link } from 'react-router-dom';
 
 const SingleCard = ({cardInfo }) => {
+    let dispatch = useDispatch();
+    
+    const HandleLinkClick = (type) => {
+        dispatch(removeAllFilters());
+        dispatch(filterProducts(type));
+        dispatch(renderFilter()); 
+    }
+
     return (
-        <article className="col-12 col-md-6 col-xl-3 mb-3">
+        <article className="col-12 col-md-6 col-xl-3 mb-3 product-type-card">
+            <Link to="/products/" onClick={() => HandleLinkClick(cardInfo.title)}>
                 <Card>
                     <CardBody className="text-center">
                         { cardInfo.icon ? <Icon cardInfo={cardInfo} /> : <Image cardInfo={cardInfo} /> }
-                        
                         <CardTitle tag="h5">
                             <p className='card-title'>{cardInfo.title}</p>
                         </CardTitle>
@@ -26,6 +34,7 @@ const SingleCard = ({cardInfo }) => {
                         </CardText>
                     </CardBody>
                 </Card>
+            </Link>
         </article>
     );
 }
@@ -39,20 +48,11 @@ const Icon = ({cardInfo}) => {
 }
 
 const Image = ({cardInfo}) => {
-    let dispatch = useDispatch();
-    
-    const HandleLinkClick = (type) => {
-        dispatch(removeAllFilters());
-        dispatch(filterProducts(type));
-        dispatch(renderFilter()); 
-    }
 
     return (
-        <Link to="/products/" onClick={() => HandleLinkClick(cardInfo.title)}>
-            <div className='card-img-wrapper'>
+        <div className='card-img-wrapper'>
             <CardImg top src={cardInfo.img} alt={`${cardInfo.title} Mug`} className="card-img mb-2" />
-            </div>
-        </Link>
+        </div>
     );
 }
 

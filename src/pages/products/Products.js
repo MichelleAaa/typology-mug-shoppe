@@ -5,28 +5,16 @@ import Sort from '../../components/Sort';
 import ProductsGrid from '../../components/ProductsGrid';
 import SubscriptionSmall from '../../components/SubscriptionSmall';
 
-const ProductsHeader = () => {
-    return (
-        <HeaderSmall headerData={ProductHeaderData} />
-    )
-}
-
-const InitialProducts = () => {
-    return (
-        <ProductsGrid productsData={ProductsDisplayData}/>
-    );
-}
-
 function ProductsPage() {
     return (
-        <>
-            <ProductsHeader />
+        <React.Fragment>
+            <HeaderSmall headerData={ProductHeaderData} />
             <main>
                 <Sort />
-                <InitialProducts />
+                <ProductsGrid productsData={ProductsDisplayData}/>
             </main>
             <SubscriptionSmall />
-        </>
+        </React.Fragment>
     );
 }
 
