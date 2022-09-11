@@ -17,6 +17,7 @@ const Navigation = () => {
     }
 
     return (
+        <div>
         <Navbar
             color="light"
             expand="lg"
@@ -30,33 +31,35 @@ const Navigation = () => {
             <Collapse isOpen={isOpen} navbar>
             <Nav navbar className="ml-auto text-nowrap">
                 <NavItem>
-                    <NavLink to="/">
+                    <NavLink to="/" onClick={toggle}>
                         Home
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink to="/products/" onClick={() => HandleProductsClick()}>
+                    <NavLink to="/products/" onClick={() => {HandleProductsClick();
+                    toggle();}}>
                         Mugs
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink to="/about/">
+                    <NavLink to="/about/" onClick={toggle}>
                         About
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink to="/contact/">
+                    <NavLink to="/contact/" onClick={toggle}>
                         Contact
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink to="/cart/">
+                    <NavLink to="/cart/" onClick={toggle}>
                         <FaShoppingCart /> Cart
                     </NavLink>
                 </NavItem>
             </Nav>
             </Collapse>
         </Navbar>
+        </div>
     );
 }
 
