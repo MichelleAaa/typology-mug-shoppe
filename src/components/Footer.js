@@ -37,16 +37,16 @@ const Footer = () => {
                         <div className="col-12 pl-0 ml-0 d-flex align-items-end justify-content-end">
                             <div className="row d-flex justify-content-end justify-content-md-center align-items-center">
                                     <div className='col-2 col-md-5 col-lg-2'>
-                                        <a className="btn mr-1 social-icons" href="http://instagram.com/"><FaInstagramSquare size='46px' /></a>
+                                        <a className="btn mr-1 social-icons" href="http://instagram.com/" target="_blank" rel="noreferrer noopener"><FaInstagramSquare size='46px' /></a>
                                     </div>
                                     <div className='col-2 col-md-5 col-lg-2'>
-                                        <a className="btn mr-1 social-icons" href="http://facebook.com/"><ImFacebook2 size='40px' /></a>
+                                        <a className="btn mr-1 social-icons" href="http://facebook.com/" target="_blank" rel="noreferrer noopener"><ImFacebook2 size='40px' /></a>
                                     </div>
                                     <div className='col-2 col-md-5 col-lg-2'>
-                                        <a className="btn mr-1 social-icons" href="http://twitter.com/"><FaTwitterSquare size='46px' /></a>
+                                        <a className="btn mr-1 social-icons" href="http://twitter.com/" target="_blank" rel="noreferrer noopener"><FaTwitterSquare size='46px' /></a>
                                     </div>
                                     <div className='col-2 col-md-5 col-lg-2'>
-                                        <a className="btn mr-1 social-icons" href="http://youtube.com/"><ImYoutube2 size='46px' /></a>
+                                        <a className="btn mr-1 social-icons" href="http://youtube.com/" target="_blank" rel="noreferrer noopener"><ImYoutube2 size='46px' /></a>
                                     </div>
                                 </div>
                             </div>

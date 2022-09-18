@@ -39,7 +39,7 @@ const Sort = () => {
         <div className="container-fluid mt-1 pt-4 pb-5">
             <div className='row justify-content-center mx-5'>
                 <div className="col-12 d-flex justify-content-end filter-list">
-                    <div className='d-flex flex-row flex-wrap justify-content-center my-auto font-italic'>{filters.map(filter => <ActiveFilters filterType={filter}/>)}</div>
+                    <div className='d-flex flex-row flex-wrap justify-content-center my-auto font-italic'>{filters.map(filter => <ActiveFilters key={filters.indexOf(filter).toString()} filterType={filter}/>)}</div>
                         {filters.length !== 0 ? 
                         <>
                         <div className='d-flex flex-row justify-content-center align-items-center'>
@@ -137,7 +137,6 @@ const ActiveFilters = (filterType) => {
         dispatch(renderFilter());
     };
 
-    console.log(filterType);
     return (
         <section className='d-flex flex-row justify-content-center'>
             <p className='my-auto mr-1'> 

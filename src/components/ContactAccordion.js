@@ -14,7 +14,7 @@ function Accordion() {
                         <div className='info'>
                         {AccordionFAQData.map(section => {
                             return (
-                            <QuestionSection key={section.id} sectionData={section}></QuestionSection>
+                            <QuestionSection key={section.id} sectionData={section} />
                             );
                         })}
                         </div>
@@ -29,7 +29,7 @@ const QuestionSection = ({ sectionData }) => {
     const [showInfo, setShowInfo] = useState(false);
     return (
         <section className='faq-category'>
-        <div>
+        <div className='faq-category-title-container'>
             <button type='button' className='btn faq-category-title' onClick={() => setShowInfo(!showInfo)}>
                 {sectionData.title + ' '} 
             {showInfo ? 
@@ -39,7 +39,7 @@ const QuestionSection = ({ sectionData }) => {
                 } 
             </button>
         </div>
-        {showInfo && <p>{sectionData.questions.map(question => <SectionQuestions questionData={question}/>)}</p>}
+        {showInfo && <div>{sectionData.questions.map(question => <SectionQuestions key={question.id} questionData={question}/>)}</div>}
         </section>
     );
 };

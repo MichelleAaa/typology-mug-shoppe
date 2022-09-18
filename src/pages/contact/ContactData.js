@@ -19,16 +19,16 @@ export const ContactHeaderData = {
 }
 
 export const AccordionFAQData = [
-        {   id: 0,
+        {   id: 0.0,
             title: 'ORDERING',
             questions: [
             {
-                id: 0,
+                id: 0.1,
                 title: 'How do I place an order?',
                 answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
             },
             {
-                id: 2,
+                id: 0.2,
                 title: 'How can I update an order I already placed?',
                 answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
             },
@@ -39,36 +39,36 @@ export const AccordionFAQData = [
             },
         ]
     },
-        {   id: 1,
+        {   id: 1.0,
             title: 'SHIPPING',
             questions: [
             {
-                id: 0,
+                id: 1.1,
                 title: 'How long does it take to ship?',
                 answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
             },
             {
-                id: 2,
+                id: 1.2,
                 title: 'What if my package is lost in shipment?',
                 answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
             },
             {
-                id: 3,
+                id: 1.3,
                 title: 'Do you ship to P.O. Boxes?',
                 answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
             },
         ]
     },
-        {   id: 2,
+        {   id: 2.0,
             title: 'RETURNS',
             questions: [
             {
-                id: 0,
+                id: 2.1,
                 title: 'What is your refund policy?',
                 answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
             },
             {
-                id: 2,
+                id: 2.2,
                 title: 'When do I need to request a refund by?',
                 answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
             }
