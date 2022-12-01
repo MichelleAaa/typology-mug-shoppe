@@ -54,7 +54,7 @@ const AnimationLayout = () => {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/typology-mug-shoppe">
       <Navigation />
       <Routes>
         <Route element={<AnimationLayout />}>
