@@ -112,6 +112,7 @@ The technologies implemented in this project include React, React Router Dom 6, 
 - John Smilga - React Tutorial and Projects Course- https://www.udemy.com/course/react-tutorial-and-projects-course/  (ComfySloth Store Project - Inspiration for cart and filtering functionality, though my project uses Redux with Toolkit instead of useContext.)
 - Digital Skills - https://dribbble.com/shots/18018185-Digital-Skills-Hero-Website  (Inspiration for the three image header design.)
 - Beauty Salon Landing Page - https://dribbble.com/shots/18014206-Beauty-Salon-Landing-Page  (Inspiration for the home page three image grid with side text.)
+- redbubble.com and placeit.net were used to create the cup images.
 
 # Note
 
