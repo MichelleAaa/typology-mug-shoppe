@@ -11,13 +11,13 @@ const HeaderSmall = ({ headerData }) => {
             <header className="mt-5">
                 <div className="container-fluid pt-4 header-small">
                     <div className="row d-flex justify-content-around align-items-center">
-                        <div className="col-12 col-sm-10 col-md-10 col-lg-4 col-xl-4 text-center d-flex justify-content-between pb-5 pb-lg-0">
+                        <div className="col-11 col-sm-10 col-md-10 col-lg-4 col-xl-4 text-center d-flex justify-content-between pb-5 pb-lg-0">
                             <img src={headerData.img3} className='header-small-img' alt='cup'></img>
                             <img src={headerData.img1} className='header-small-img' alt='cup'></img>
                             <img src={headerData.img2} className='header-small-img' alt='cup'></img>
                         </div>
-                        <div className="col-12 col-sm-10 col-md-6 col-xl-7 text-center mt-1 mt-xl-5">
-                            <h1>{headerData.title}</h1>
+                        <div className="col-11 col-sm-10 col-md-6 col-xl-7 text-center mt-1 mt-xl-5">
+                            <h1 className="mb-2 mb-sm-0">{headerData.title}</h1>
                             <h3 className="px-lg-3 mb-3">{headerData.subtitle}</h3>
                             <p className="mx-lg-5 mt-2 ">{headerData.text}</p>
                             {headerData.button && <Button buttonData={headerData.button}/>}

@@ -35,7 +35,7 @@ const Footer = () => {
                     <div className='col-12 col-md-3 col-lg-5 col-xl-7 pr-4'>
                         <div className='row'>
                         <div className="col-12 pl-0 ml-0 d-flex align-items-end justify-content-end">
-                            <div className="row d-flex justify-content-end justify-content-md-center align-items-center">
+                            <div className="row d-flex justify-content-around justify-content-sm-end justify-content-md-center align-items-center mr-1 mr-sm-0">
                                     <div className='col-2 col-md-5 col-lg-2'>
                                         <a className="btn mr-1 social-icons" href="http://instagram.com/" target="_blank" rel="noreferrer noopener"><FaInstagramSquare size='46px' /></a>
                                     </div>

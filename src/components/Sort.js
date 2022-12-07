@@ -38,18 +38,20 @@ const Sort = () => {
     return (
         <div className="container-fluid mt-1 pt-4 pb-5">
             <div className='row justify-content-center mx-5'>
-                <div className="col-12 d-flex justify-content-end filter-list">
-                    <div className='d-flex flex-row flex-wrap justify-content-center my-auto font-italic'>{filters.map(filter => <ActiveFilters key={filters.indexOf(filter).toString()} filterType={filter}/>)}</div>
-                        {filters.length !== 0 ? 
-                        <>
-                        <div className='d-flex flex-row justify-content-center align-items-center'>
-                            <p className='text-nowrap my-auto'>- Remove All</p>
-                            <button type='button' className='amount-btn my-0 py-0' onClick={() => HandleReset()}><HiOutlineX size='29px' color='red' />
-                            </button>
-                            </div>
-                        </> : ''}
+                <div className="col-12 d-flex flex-column flex-sm-row justify-content-end filter-list">
+                    <div className='d-flex flex-row flex-wrap justify-content-center my-auto font-italic'>
+                        {filters.map(filter => <ActiveFilters key={filters.indexOf(filter).toString()} filterType={filter}/>)}
                     </div>
+                    {filters.length !== 0 ? 
+                    <>
+                    <div className='d-flex flex-row justify-content-center align-items-center'>
+                        <p className='text-nowrap my-auto'>- Remove All</p>
+                        <button type='button' className='amount-btn my-0 py-0' onClick={() => HandleReset()}><HiOutlineX size='29px' color='red' />
+                        </button>
+                        </div>
+                    </> : ''}
                 </div>
+            </div>
             <div className='row d-none d-sm-flex justify-content-center mx-5'>
                 <div className="col-12 d-flex justify-content-end sort-wrapper">
                     <Dropdown direction='left' isOpen={dropdownOpen1} toggle={toggle1} className="d-none d-sm-block">

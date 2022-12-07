@@ -29,7 +29,7 @@ const SubscriptionLarge = () => {
                     <p>Never miss a sale, sign up today!</p>
                     <form>
                         <div className='d-flex align-items-center justify-content-center'>
-                        <input type='email' placeholder="enter email" className='mr-0' onChange={handleInputChange}/>
+                        <input type='email' placeholder="enter email" className='mr-0 subscription-input' onChange={handleInputChange}/>
                         <button type='button' className='btn-subscription m-0 p-0' onClick={() => handleEmailSubmit()}><AiFillRightSquare size='50px' margin='0' padding='0' /></button>
                         </div>
                     </form>

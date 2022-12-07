@@ -11,7 +11,7 @@ export const ContactHeaderData = {
     text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. ',
     button: {
         id: 0,
-        text: 'View Our Selection Now',
+        text: 'View Our Selection',
         btnClass: 'outline-btn',
         linkClass: 'outline-link',
         link: '/products'

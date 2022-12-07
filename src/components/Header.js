@@ -27,7 +27,7 @@ const Header = () => {
                             <div className="col-12 col-md-5 col-xl-6 mt-5 text-center">
                                 <h1 className="jumbotron-header">Typology</h1>
                                 <h2 className="jumbotron-subheader text-nowrap">Mug Shoppe</h2>
-                                <h3 className="px-lg-3 mb-3">The best way to share your personality preference without saying a word.</h3>
+                                <h3 className="px-lg-3 mb-3 jumbotron-subtext">The best way to share your personality preference without saying a word.</h3>
                                 <p className="mx-lg-5 mt-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam voluptates deleniti cum rem a?</p>
                                 <p className="mx-lg-5 mt-2 d-block d-md-none d-xl-block jumbotron-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam voluptates deleniti cum rem a? Sit beatae labore id. Minima cumque vel eum harum enim tempore explicabo doloremque laudantium magni molestias.</p>
                                 <Button buttonData={HeaderButton}/>

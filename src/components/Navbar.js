@@ -25,7 +25,7 @@ const Navigation = () => {
             light
         >
             <NavbarBrand className="mr-auto" href="/typology-mug-shoppe">
-                <Link to="/"><img src={Logo} height="30"  alt="Typology Logo" /></Link>
+                <Link to="/"><img src={Logo} height="30" className="nav-logo"  alt="Typology Logo" /></Link>
             </NavbarBrand>
             <NavbarToggler onClick={toggle}  />
             <Collapse isOpen={isOpen} navbar>

@@ -64,7 +64,7 @@ const CartPage = () => {
                         <div className='row d-flex justify-content-end pb-5'>
                             <div className='col-md-8 col-xl-5'>
                                 <span style={{textDecoration: "underline", color:"blue"}} href="#" id="TooltipExample">
-                                    <Button buttonData={{id: 0, text: 'Proceed to Checkout', btnClass: 'outline-btn text-nowrap', linkClass: 'outline-link', link: '/carterror'}}/>
+                                    <Button buttonData={{id: 0, text: 'Checkout', btnClass: 'outline-btn text-nowrap', linkClass: 'outline-link', link: '/carterror'}}/>
                                 </span>
                                 <Tooltip placement="bottom" isOpen={tooltipOpen} target="TooltipExample" toggle={toggle}>Apologies, but we are unable to accept orders at this time.
                                 </Tooltip>
@@ -95,13 +95,13 @@ const CartItem = ({ itemData }) => {
     return (
         <React.Fragment>
             <div className='row d-flex justify-content-center align-items-center'>
-                <div className="col-4 col-md-3 col-lg-2">
+                <div className="col-11 col-sm-4 mb-3 mb-sm-0 col-md-3 col-lg-2">
                     <img className="img-fluid cart-img" src={itemData.img[0].img} alt={itemData.name} />
                 </div>
                 <div className="col-8 col-lg-6">
                     <div className='row'>
                         <div className='col-6'>
-                            <h5 className='text-nowrap'>{itemData.name}</h5>
+                            <h5 className=''>{itemData.name}</h5>
                             <p className='cart-amount'>{FormatPrice(itemData.price)}</p>
                         </div>
                         <div className='col-6 d-flex justify-content-end'>
