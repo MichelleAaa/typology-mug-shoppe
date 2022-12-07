@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/typology-mug-shoppe/static/css/main.3e6e7ef6.css",
-    "main.js": "/typology-mug-shoppe/static/js/main.4221fd83.js",
+    "main.css": "/typology-mug-shoppe/static/css/main.5c082d38.css",
+    "main.js": "/typology-mug-shoppe/static/js/main.7ec10121.js",
     "static/js/787.07d22ca6.chunk.js": "/typology-mug-shoppe/static/js/787.07d22ca6.chunk.js",
     "static/media/enfp-sock.png": "/typology-mug-shoppe/static/media/enfp-sock.fdb1ad00e0d2c50601f6.png",
     "static/media/istj-plate.png": "/typology-mug-shoppe/static/media/istj-plate.dd9b4e2eaebff8a2eef6.png",
@@ -96,12 +96,12 @@
     "static/media/enfj4.jpg": "/typology-mug-shoppe/static/media/enfj4.6b278d71a07c2a49ba87.jpg",
     "static/media/intp4.jpg": "/typology-mug-shoppe/static/media/intp4.f7cbdb60956a5823a2f2.jpg",
     "index.html": "/typology-mug-shoppe/index.html",
-    "main.3e6e7ef6.css.map": "/typology-mug-shoppe/static/css/main.3e6e7ef6.css.map",
-    "main.4221fd83.js.map": "/typology-mug-shoppe/static/js/main.4221fd83.js.map",
+    "main.5c082d38.css.map": "/typology-mug-shoppe/static/css/main.5c082d38.css.map",
+    "main.7ec10121.js.map": "/typology-mug-shoppe/static/js/main.7ec10121.js.map",
     "787.07d22ca6.chunk.js.map": "/typology-mug-shoppe/static/js/787.07d22ca6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e6e7ef6.css",
-    "static/js/main.4221fd83.js"
+    "static/css/main.5c082d38.css",
+    "static/js/main.7ec10121.js"
   ]
 }
