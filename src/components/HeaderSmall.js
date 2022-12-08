@@ -10,7 +10,7 @@ const HeaderSmall = ({ headerData }) => {
             </div>
             <header className="mt-5">
                 <div className="container-fluid pt-4 header-small">
-                    <div className="row d-flex justify-content-around align-items-center">
+                    <div className="row d-flex justify-content-center justify-content-sm-around align-items-center">
                         <div className="col-11 col-sm-10 col-md-10 col-lg-4 col-xl-4 text-center d-flex justify-content-between pb-5 pb-lg-0">
                             <img src={headerData.img3} className='header-small-img' alt='cup'></img>
                             <img src={headerData.img1} className='header-small-img' alt='cup'></img>

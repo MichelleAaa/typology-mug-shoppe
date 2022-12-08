@@ -689,6 +689,7 @@ hr {
   
   .header-small-img:nth-child(3) {
     width: 40vw;
+    padding-right: 0px;
   }
 }
 
@@ -897,6 +898,12 @@ hr {
   font-size: 2.2rem;
   font-family: var(--font-largest);
   color: var(--main-medium-2);
+}
+
+@media only screen and (max-width: 400px) {
+  .product-modal-text {
+      font-size: var(--font-size-4);
+  }
 }
 
 .form-control {
